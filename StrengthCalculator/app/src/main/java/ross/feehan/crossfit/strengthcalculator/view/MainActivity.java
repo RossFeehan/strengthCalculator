@@ -1,9 +1,11 @@
-package ross.feehan.crossfit.strengthcalculator;
+package ross.feehan.crossfit.strengthcalculator.view;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import ross.feehan.crossfit.strengthcalculator.R;
 
 
 public class MainActivity extends ActionBarActivity {
