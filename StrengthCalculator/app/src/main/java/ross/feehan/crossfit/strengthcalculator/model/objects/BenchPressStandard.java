@@ -11,8 +11,9 @@ public class BenchPressStandard extends RealmObject {
 
     private double bodyWeight;
     private int untrained, novice, intermediate, advanced, elite;
-    private String sex;
-    public final static String SEXMALE = "Male", SEXFEMALE = "Female";
+    private String sex, unitOfWeight;
+    public final static String SEXMALE = "Male", SEXFEMALE = "Female",
+            KGUNIT = "KG", LBSUNIT = "LBS";
 
 
 
