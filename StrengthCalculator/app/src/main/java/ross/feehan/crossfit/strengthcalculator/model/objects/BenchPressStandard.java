@@ -9,8 +9,12 @@ import io.realm.RealmObject;
 public class BenchPressStandard extends RealmObject {
 
 
-    double bodyWeight;
-    int untrained, novice, intermediate, advanced, elite;
+    private double bodyWeight;
+    private int untrained, novice, intermediate, advanced, elite;
+    private String sex;
+    public final static String SEXMALE = "Male", SEXFEMALE = "Female";
+
+
 
     //CONSTRUCTORS
     public BenchPressStandard(){
@@ -42,6 +46,10 @@ public class BenchPressStandard extends RealmObject {
         this.elite = elite;
     }
 
+    public void setSex(String sex) {
+        this.sex = sex;
+    }
+
     //GETTERS
     public double getBodyWeight() {
         return bodyWeight;
@@ -65,5 +73,9 @@ public class BenchPressStandard extends RealmObject {
 
     public int getElite() {
         return elite;
+    }
+
+    public String getSex() {
+        return sex;
     }
 }
