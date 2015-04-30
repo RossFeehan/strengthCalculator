@@ -1,0 +1,1772 @@
+[
+  {
+    "BenchPressStandard": [
+      {
+        "bodyWeight": 114,
+        "untrained": 84,
+        "novice": 107,
+        "intermediate": 130,
+        "advanced": 179,
+        "elite": 222,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 91,
+        "novice": 116,
+        "intermediate": 142,
+        "advanced": 194,
+        "elite": 242,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 98,
+        "novice": 125,
+        "intermediate": 153,
+        "advanced": 208,
+        "elite": 260,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 109,
+        "novice": 140,
+        "intermediate": 172,
+        "advanced": 234,
+        "elite": 291,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 119,
+        "novice": 152,
+        "intermediate": 187,
+        "advanced": 255,
+        "elite": 319,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 128,
+        "novice": 164,
+        "intermediate": 201,
+        "advanced": 275,
+        "elite": 343,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 135,
+        "novice": 173,
+        "intermediate": 213,
+        "advanced": 289,
+        "elite": 362,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 220,
+        "untrained": 142,
+        "novice": 183,
+        "intermediate": 225,
+        "advanced": 306,
+        "elite": 381,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 242,
+        "untrained": 149,
+        "novice": 190,
+        "intermediate": 232,
+        "advanced": 316,
+        "elite": 395,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 275,
+        "untrained": 153,
+        "novice": 196,
+        "intermediate": 239,
+        "advanced": 325,
+        "elite": 407,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 319,
+        "untrained": 156,
+        "novice": 199,
+        "intermediate": 244,
+        "advanced": 333,
+        "elite": 416,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 320,
+        "untrained": 159,
+        "novice": 204,
+        "intermediate": 248,
+        "advanced": 340,
+        "elite": 425,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 97,
+        "untrained": 49,
+        "novice": 63,
+        "intermediate": 73,
+        "advanced": 94,
+        "elite": 116,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 105,
+        "untrained": 53,
+        "novice": 68,
+        "intermediate": 79,
+        "advanced": 102,
+        "elite": 124,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 114,
+        "untrained": 57,
+        "novice": 73,
+        "intermediate": 85,
+        "advanced": 109,
+        "elite": 133,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 60,
+        "novice": 77,
+        "intermediate": 90,
+        "advanced": 116,
+        "elite": 142,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 64,
+        "novice": 82,
+        "intermediate": 95,
+        "advanced": 122,
+        "elite": 150,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 70,
+        "novice": 90,
+        "intermediate": 105,
+        "advanced": 135,
+        "elite": 165,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 76,
+        "novice": 97,
+        "intermediate": 113,
+        "advanced": 146,
+        "elite": 183,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 81,
+        "novice": 104,
+        "intermediate": 122,
+        "advanced": 158,
+        "elite": 192,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 88,
+        "novice": 112,
+        "intermediate": 130,
+        "advanced": 167,
+        "elite": 205,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 199,
+        "untrained": 92,
+        "novice": 118,
+        "intermediate": 137,
+        "advanced": 177,
+        "elite": 217,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 37,
+        "novice": 50,
+        "intermediate": 60,
+        "advanced": 82,
+        "elite": 100,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 40,
+        "novice": 52,
+        "intermediate": 62,
+        "advanced": 90,
+        "elite": 110,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 45,
+        "novice": 57,
+        "intermediate": 70,
+        "advanced": 95,
+        "elite": 117,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 50,
+        "novice": 65,
+        "intermediate": 77,
+        "advanced": 107,
+        "elite": 132,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 55,
+        "novice": 70,
+        "intermediate": 85,
+        "advanced": 115,
+        "elite": 145,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 60,
+        "novice": 75,
+        "intermediate": 90,
+        "advanced": 125,
+        "elite": 157,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 62,
+        "novice": 80,
+        "intermediate": 97,
+        "advanced": 132,
+        "elite": 162,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 100,
+        "untrained": 62,
+        "novice": 82,
+        "intermediate": 102,
+        "advanced": 137,
+        "elite": 172,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 110,
+        "untrained": 65,
+        "novice": 85,
+        "intermediate": 105,
+        "advanced": 142,
+        "elite": 180,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 125,
+        "untrained": 67,
+        "novice": 87,
+        "intermediate": 107,
+        "advanced": 147,
+        "elite": 185,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 145,
+        "untrained": 70,
+        "novice": 90,
+        "intermediate": 112,
+        "advanced": 152,
+        "elite": 190,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 150,
+        "untrained": 72,
+        "novice": 92,
+        "intermediate": 115,
+        "advanced": 155,
+        "elite": 192,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 44,
+        "untrained": 22,
+        "novice": 30,
+        "intermediate": 35,
+        "advanced": 42,
+        "elite": 52,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 48,
+        "untrained": 25,
+        "novice": 32,
+        "intermediate": 37,
+        "advanced": 45,
+        "elite": 57,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 27,
+        "novice": 35,
+        "intermediate": 37,
+        "advanced": 50,
+        "elite": 62,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 30,
+        "novice": 37,
+        "intermediate": 40,
+        "advanced": 52,
+        "elite": 65,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 32,
+        "novice": 40,
+        "intermediate": 42,
+        "advanced": 57,
+        "elite": 67,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 35,
+        "novice": 40,
+        "intermediate": 47,
+        "advanced": 62,
+        "elite": 75,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 37,
+        "novice": 42,
+        "intermediate": 52,
+        "advanced": 65,
+        "elite": 85,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 37,
+        "novice": 50,
+        "intermediate": 55,
+        "advanced": 72,
+        "elite": 90,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 40,
+        "novice": 52,
+        "intermediate": 60,
+        "advanced": 75,
+        "elite": 95,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 95,
+        "untrained": 42,
+        "novice": 55,
+        "intermediate": 62,
+        "advanced": 80,
+        "elite": 100,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      }
+    ],
+    "SquatStandard": [
+      {
+        "bodyWeight": 114,
+        "untrained": 78,
+        "novice": 144,
+        "intermediate": 174,
+        "advanced": 240,
+        "elite": 320,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 84,
+        "novice": 155,
+        "intermediate": 190,
+        "advanced": 259,
+        "elite": 346,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 91,
+        "novice": 168,
+        "intermediate": 205,
+        "advanced": 278,
+        "elite": 369,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 101,
+        "novice": 188,
+        "intermediate": 230,
+        "advanced": 313,
+        "elite": 410,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 110,
+        "novice": 204,
+        "intermediate": 250,
+        "advanced": 342,
+        "elite": 445,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 119,
+        "novice": 220,
+        "intermediate": 269,
+        "advanced": 367,
+        "elite": 479,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 125,
+        "novice": 232,
+        "intermediate": 285,
+        "advanced": 387,
+        "elite": 504,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 220,
+        "untrained": 132,
+        "novice": 244,
+        "intermediate": 301,
+        "advanced": 409,
+        "elite": 532,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 242,
+        "untrained": 137,
+        "novice": 255,
+        "intermediate": 311,
+        "advanced": 423,
+        "elite": 551,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 275,
+        "untrained": 141,
+        "novice": 261,
+        "intermediate": 319,
+        "advanced": 435,
+        "elite": 567,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 319,
+        "untrained": 144,
+        "novice": 267,
+        "intermediate": 326,
+        "advanced": 445,
+        "elite": 580,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 320,
+        "untrained": 147,
+        "novice": 272,
+        "intermediate": 332,
+        "advanced": 454,
+        "elite": 593,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 97,
+        "untrained": 46,
+        "novice": 84,
+        "intermediate": 98,
+        "advanced": 129,
+        "elite": 163,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 105,
+        "untrained": 49,
+        "novice": 91,
+        "intermediate": 106,
+        "advanced": 140,
+        "elite": 174,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 114,
+        "untrained": 53,
+        "novice": 98,
+        "intermediate": 114,
+        "advanced": 150,
+        "elite": 187,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 56,
+        "novice": 103,
+        "intermediate": 121,
+        "advanced": 160,
+        "elite": 199,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 59,
+        "novice": 110,
+        "intermediate": 127,
+        "advanced": 168,
+        "elite": 211,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 65,
+        "novice": 121,
+        "intermediate": 141,
+        "advanced": 185,
+        "elite": 232,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 70,
+        "novice": 130,
+        "intermediate": 151,
+        "advanced": 200,
+        "elite": 256,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 75,
+        "novice": 139,
+        "intermediate": 164,
+        "advanced": 215,
+        "elite": 268,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 81,
+        "novice": 150,
+        "intermediate": 174,
+        "advanced": 229,
+        "elite": 288,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 199,
+        "untrained": 85,
+        "novice": 158,
+        "intermediate": 184,
+        "advanced": 242,
+        "elite": 303,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 35,
+        "novice": 65,
+        "intermediate": 80,
+        "advanced": 107,
+        "elite": 145,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 37,
+        "novice": 70,
+        "intermediate": 87,
+        "advanced": 117,
+        "elite": 157,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 40,
+        "novice": 77,
+        "intermediate": 92,
+        "advanced": 127,
+        "elite": 167,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 45,
+        "novice": 85,
+        "intermediate": 105,
+        "advanced": 142,
+        "elite": 185,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 50,
+        "novice": 92,
+        "intermediate": 112,
+        "advanced": 155,
+        "elite": 202,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 55,
+        "novice": 100,
+        "intermediate": 122,
+        "advanced": 167,
+        "elite": 217,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 57,
+        "novice": 105,
+        "intermediate": 130,
+        "advanced": 177,
+        "elite": 230,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 100,
+        "untrained": 60,
+        "novice": 110,
+        "intermediate": 135,
+        "advanced": 185,
+        "elite": 240,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 110,
+        "untrained": 62,
+        "novice": 115,
+        "intermediate": 140,
+        "advanced": 192,
+        "elite": 250,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 125,
+        "untrained": 65,
+        "novice": 117,
+        "intermediate": 145,
+        "advanced": 197,
+        "elite": 257,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 145,
+        "untrained": 67,
+        "novice": 122,
+        "intermediate": 147,
+        "advanced": 202,
+        "elite": 262,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 150,
+        "untrained": 70,
+        "novice": 125,
+        "intermediate": 150,
+        "advanced": 207,
+        "elite": 270,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 44,
+        "untrained": 20,
+        "novice": 37,
+        "intermediate": 45,
+        "advanced": 60,
+        "elite": 75,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 48,
+        "untrained": 22,
+        "novice": 40,
+        "intermediate": 47,
+        "advanced": 65,
+        "elite": 80,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 25,
+        "novice": 45,
+        "intermediate": 52,
+        "advanced": 67,
+        "elite": 87,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 25,
+        "novice": 47,
+        "intermediate": 55,
+        "advanced": 72,
+        "elite": 90,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 27,
+        "novice": 50,
+        "intermediate": 60,
+        "advanced": 77,
+        "elite": 95,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 30,
+        "novice": 55,
+        "intermediate": 62,
+        "advanced": 85,
+        "elite": 105,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 32,
+        "novice": 57,
+        "intermediate": 67,
+        "advanced": 90,
+        "elite": 115,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 35,
+        "novice": 62,
+        "intermediate": 75,
+        "advanced": 97,
+        "elite": 122,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 37,
+        "novice": 67,
+        "intermediate": 80,
+        "advanced": 105,
+        "elite": 132,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 95,
+        "untrained": 40,
+        "novice": 72,
+        "intermediate": 85,
+        "advanced": 110,
+        "elite": 137,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      }
+    ],
+    "DeadLiftStandard": [
+      {
+        "bodyWeight": 114,
+        "untrained": 97,
+        "novice": 179,
+        "intermediate": 204,
+        "advanced": 299,
+        "elite": 387,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 105,
+        "novice": 194,
+        "intermediate": 222,
+        "advanced": 320,
+        "elite": 414,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 113,
+        "novice": 209,
+        "intermediate": 239,
+        "advanced": 342,
+        "elite": 438,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 126,
+        "novice": 234,
+        "intermediate": 269,
+        "advanced": 380,
+        "elite": 482,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 137,
+        "novice": 254,
+        "intermediate": 293,
+        "advanced": 411,
+        "elite": 518,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 148,
+        "novice": 274,
+        "intermediate": 315,
+        "advanced": 438,
+        "elite": 548,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 156,
+        "novice": 289,
+        "intermediate": 333,
+        "advanced": 457,
+        "elite": 567,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 220,
+        "untrained": 164,
+        "novice": 305,
+        "intermediate": 351,
+        "advanced": 479,
+        "elite": 586,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 242,
+        "untrained": 172,
+        "novice": 318,
+        "intermediate": 363,
+        "advanced": 490,
+        "elite": 596,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 275,
+        "untrained": 176,
+        "novice": 326,
+        "intermediate": 373,
+        "advanced": 499,
+        "elite": 602,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 319,
+        "untrained": 180,
+        "novice": 333,
+        "intermediate": 381,
+        "advanced": 506,
+        "elite": 608,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 320,
+        "untrained": 183,
+        "novice": 340,
+        "intermediate": 388,
+        "advanced": 512,
+        "elite": 617,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 97,
+        "untrained": 57,
+        "novice": 105,
+        "intermediate": 122,
+        "advanced": 175,
+        "elite": 232,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 105,
+        "untrained": 61,
+        "novice": 114,
+        "intermediate": 132,
+        "advanced": 189,
+        "elite": 242,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 114,
+        "untrained": 66,
+        "novice": 122,
+        "intermediate": 142,
+        "advanced": 200,
+        "elite": 253,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 70,
+        "novice": 129,
+        "intermediate": 151,
+        "advanced": 211,
+        "elite": 263,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 74,
+        "novice": 137,
+        "intermediate": 159,
+        "advanced": 220,
+        "elite": 273,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 81,
+        "novice": 151,
+        "intermediate": 176,
+        "advanced": 241,
+        "elite": 295,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 88,
+        "novice": 162,
+        "intermediate": 189,
+        "advanced": 258,
+        "elite": 319,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 94,
+        "novice": 174,
+        "intermediate": 204,
+        "advanced": 273,
+        "elite": 329,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 101,
+        "novice": 187,
+        "intermediate": 217,
+        "advanced": 284,
+        "elite": 349,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 199,
+        "untrained": 107,
+        "novice": 197,
+        "intermediate": 229,
+        "advanced": 297,
+        "elite": 364,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 42,
+        "novice": 82,
+        "intermediate": 92,
+        "advanced": 135,
+        "elite": 175,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 47,
+        "novice": 87,
+        "intermediate": 100,
+        "advanced": 145,
+        "elite": 187,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 50,
+        "novice": 95,
+        "intermediate": 110,
+        "advanced": 155,
+        "elite": 200,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 57,
+        "novice": 107,
+        "intermediate": 122,
+        "advanced": 172,
+        "elite": 217,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 62,
+        "novice": 115,
+        "intermediate": 135,
+        "advanced": 185,
+        "elite": 235,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 67,
+        "novice": 125,
+        "intermediate": 142,
+        "advanced": 200,
+        "elite": 250,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 70,
+        "novice": 132,
+        "intermediate": 152,
+        "advanced": 207,
+        "elite": 257,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 100,
+        "untrained": 75,
+        "novice": 137,
+        "intermediate": 160,
+        "advanced": 217,
+        "elite": 265,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 110,
+        "untrained": 77,
+        "novice": 145,
+        "intermediate": 165,
+        "advanced": 222,
+        "elite": 270,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 125,
+        "untrained": 80,
+        "novice": 147,
+        "intermediate": 170,
+        "advanced": 227,
+        "elite": 272,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 145,
+        "untrained": 82,
+        "novice": 152,
+        "intermediate": 172,
+        "advanced": 230,
+        "elite": 277,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 150,
+        "untrained": 85,
+        "novice": 155,
+        "intermediate": 177,
+        "advanced": 232,
+        "elite": 280,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 44,
+        "untrained": 25,
+        "novice": 47,
+        "intermediate": 50,
+        "advanced": 80,
+        "elite": 105,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 48,
+        "untrained": 27,
+        "novice": 52,
+        "intermediate": 60,
+        "advanced": 85,
+        "elite": 110,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 30,
+        "novice": 55,
+        "intermediate": 62,
+        "advanced": 90,
+        "elite": 115,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 32,
+        "novice": 60,
+        "intermediate": 67,
+        "advanced": 95,
+        "elite": 120,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 35,
+        "novice": 62,
+        "intermediate": 72,
+        "advanced": 100,
+        "elite": 125,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 37,
+        "novice": 67,
+        "intermediate": 80,
+        "advanced": 110,
+        "elite": 135,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 40,
+        "novice": 72,
+        "intermediate": 85,
+        "advanced": 117,
+        "elite": 145,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 42,
+        "novice": 80,
+        "intermediate": 92,
+        "advanced": 125,
+        "elite": 150,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 45,
+        "novice": 87,
+        "intermediate": 97,
+        "advanced": 130,
+        "elite": 160,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 95,
+        "untrained": 50,
+        "novice": 90,
+        "intermediate": 105,
+        "advanced": 137,
+        "elite": 165,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      }
+    ],
+    "OverHeadPressStandard": [
+      {
+        "bodyWeight": 114,
+        "untrained": 53,
+        "novice": 72,
+        "intermediate": 90,
+        "advanced": 107,
+        "elite": 129,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 57,
+        "novice": 78,
+        "intermediate": 98,
+        "advanced": 116,
+        "elite": 141,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 61,
+        "novice": 84,
+        "intermediate": 105,
+        "advanced": 125,
+        "elite": 151,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 69,
+        "novice": 94,
+        "intermediate": 119,
+        "advanced": 140,
+        "elite": 169,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 75,
+        "novice": 102,
+        "intermediate": 129,
+        "advanced": 153,
+        "elite": 186,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 81,
+        "novice": 110,
+        "intermediate": 138,
+        "advanced": 164,
+        "elite": 218,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 85,
+        "novice": 116,
+        "intermediate": 146,
+        "advanced": 173,
+        "elite": 234,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 220,
+        "untrained": 89,
+        "novice": 122,
+        "intermediate": 155,
+        "advanced": 183,
+        "elite": 255,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 242,
+        "untrained": 93,
+        "novice": 127,
+        "intermediate": 159,
+        "advanced": 189,
+        "elite": 264,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 275,
+        "untrained": 96,
+        "novice": 131,
+        "intermediate": 164,
+        "advanced": 194,
+        "elite": 272,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 319,
+        "untrained": 98,
+        "novice": 133,
+        "intermediate": 167,
+        "advanced": 199,
+        "elite": 278,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 320,
+        "untrained": 100,
+        "novice": 136,
+        "intermediate": 171,
+        "advanced": 203,
+        "elite": 284,
+        "sex": "Male",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 97,
+        "untrained": 31,
+        "novice": 42,
+        "intermediate": 50,
+        "advanced": 66,
+        "elite": 85,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 105,
+        "untrained": 33,
+        "novice": 46,
+        "intermediate": 53,
+        "advanced": 71,
+        "elite": 91,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 114,
+        "untrained": 36,
+        "novice": 49,
+        "intermediate": 58,
+        "advanced": 76,
+        "elite": 97,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 123,
+        "untrained": 38,
+        "novice": 52,
+        "intermediate": 61,
+        "advanced": 81,
+        "elite": 104,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 132,
+        "untrained": 40,
+        "novice": 55,
+        "intermediate": 65,
+        "advanced": 85,
+        "elite": 110,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 148,
+        "untrained": 44,
+        "novice": 60,
+        "intermediate": 72,
+        "advanced": 94,
+        "elite": 121,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 165,
+        "untrained": 48,
+        "novice": 65,
+        "intermediate": 77,
+        "advanced": 102,
+        "elite": 134,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 181,
+        "untrained": 51,
+        "novice": 70,
+        "intermediate": 83,
+        "advanced": 110,
+        "elite": 140,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 198,
+        "untrained": 55,
+        "novice": 75,
+        "intermediate": 88,
+        "advanced": 117,
+        "elite": 151,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 199,
+        "untrained": 58,
+        "novice": 79,
+        "intermediate": 93,
+        "advanced": 123,
+        "elite": 159,
+        "sex": "Female",
+        "unitOfWeight": "LBS"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 22,
+        "novice": 32,
+        "intermediate": 40,
+        "advanced": 50,
+        "elite": 60,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 25,
+        "novice": 35,
+        "intermediate": 45,
+        "advanced": 52,
+        "elite": 65,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 27,
+        "novice": 37,
+        "intermediate": 47,
+        "advanced": 57,
+        "elite": 70,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 30,
+        "novice": 42,
+        "intermediate": 55,
+        "advanced": 62,
+        "elite": 77,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 32,
+        "novice": 45,
+        "intermediate": 57,
+        "advanced": 70,
+        "elite": 85,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 35,
+        "novice": 50,
+        "intermediate": 62,
+        "advanced": 75,
+        "elite": 100,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 37,
+        "novice": 52,
+        "intermediate": 65,
+        "advanced": 77,
+        "elite": 105,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 100,
+        "untrained": 40,
+        "novice": 55,
+        "intermediate": 70,
+        "advanced": 82,
+        "elite": 115,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 110,
+        "untrained": 42,
+        "novice": 57,
+        "intermediate": 72,
+        "advanced": 85,
+        "elite": 120,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 125,
+        "untrained": 42,
+        "novice": 60,
+        "intermediate": 75,
+        "advanced": 87,
+        "elite": 122,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 145,
+        "untrained": 45,
+        "novice": 60,
+        "intermediate": 75,
+        "advanced": 90,
+        "elite": 125,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 150,
+        "untrained": 45,
+        "novice": 62,
+        "intermediate": 77,
+        "advanced": 92,
+        "elite": 130,
+        "sex": "Male",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 44,
+        "untrained": 15,
+        "novice": 17,
+        "intermediate": 22,
+        "advanced": 30,
+        "elite": 40,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 48,
+        "untrained": 15,
+        "novice": 20,
+        "intermediate": 25,
+        "advanced": 32,
+        "elite": 42,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 52,
+        "untrained": 17,
+        "novice": 22,
+        "intermediate": 27,
+        "advanced": 35,
+        "elite": 45,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 56,
+        "untrained": 17,
+        "novice": 22,
+        "intermediate": 27,
+        "advanced": 37,
+        "elite": 47,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 60,
+        "untrained": 17,
+        "novice": 25,
+        "intermediate": 30,
+        "advanced": 40,
+        "elite": 50,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 67,
+        "untrained": 20,
+        "novice": 27,
+        "intermediate": 32,
+        "advanced": 42,
+        "elite": 55,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 75,
+        "untrained": 22,
+        "novice": 30,
+        "intermediate": 35,
+        "advanced": 47,
+        "elite": 62,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 82,
+        "untrained": 22,
+        "novice": 32,
+        "intermediate": 37,
+        "advanced": 50,
+        "elite": 65,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 90,
+        "untrained": 25,
+        "novice": 35,
+        "intermediate": 40,
+        "advanced": 52,
+        "elite": 67,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      },
+      {
+        "bodyWeight": 95,
+        "untrained": 27,
+        "novice": 37,
+        "intermediate": 42,
+        "advanced": 57,
+        "elite": 72,
+        "sex": "Female",
+        "unitOfWeight": "KG"
+      }
+    ]
+  }
+]

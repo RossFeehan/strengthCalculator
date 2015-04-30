@@ -3,12 +3,10 @@ package ross.feehan.crossfit.strengthcalculator.model.objects;
 import io.realm.RealmObject;
 
 /**
- * Created by Ross Feehan on 28/04/2015.
+ * Created by Ross Feehan on 29/04/2015.
  * Copyright Ross Feehan
  */
-public class BenchPressStandard extends RealmObject {
-
-
+public class SquatStandard extends RealmObject{
 
     private int bodyWeight, untrained, novice, intermediate, advanced, elite;
     private String sex, unitOfWeight;
@@ -16,7 +14,7 @@ public class BenchPressStandard extends RealmObject {
             KGUNIT = "KG", LBSUNIT = "LBS";
 
     //CONSTRUCTORS
-    public BenchPressStandard(){
+    public SquatStandard(){
 
     }
 
