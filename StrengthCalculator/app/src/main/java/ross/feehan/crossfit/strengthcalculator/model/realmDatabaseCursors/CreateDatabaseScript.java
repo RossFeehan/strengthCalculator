@@ -1,6 +1,8 @@
-package ross.feehan.crossfit.strengthcalculator.model.realmDatabase;
+package ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 
 import com.google.gson.Gson;
 
@@ -8,9 +10,11 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 
+import io.realm.Realm;
 import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
 import ross.feehan.crossfit.strengthcalculator.model.objects.DeadLiftStandard;
 import ross.feehan.crossfit.strengthcalculator.model.objects.OverHeadPressStandard;
@@ -55,7 +59,7 @@ public class CreateDatabaseScript {
                 createOverHeadPressRows(ctx, squatStandard);
 
                 //test check to see if realm is created with data
-                BenchPressStandardRealmDBCursor.emailRealm(ctx);
+                emailRealm(ctx);
 
             }
         }catch(JSONException e) {
@@ -68,11 +72,11 @@ public class CreateDatabaseScript {
     private void createBenchPressRows(Context ctx, JSONArray holderArray) throws JSONException{
 
         Gson gson = new Gson();
-            //loop through all the bench press standards and save to RealmDB
-            for(int i = 0; i<holderArray.length(); i++){
-                BenchPressStandardRealmDBCursor.createBenchPressStandard(ctx,
-                        gson.fromJson(holderArray.getJSONObject(i).toString(), BenchPressStandard.class));
-            }
+        //loop through all the bench press standards and save to RealmDB
+        for(int i = 0; i<holderArray.length(); i++){
+            BenchPressStandardRealmDBCursor.createBenchPressStandard(ctx,
+                    gson.fromJson(holderArray.getJSONObject(i).toString(), BenchPressStandard.class));
+        }
     }
 
     private void createSquatRows(Context ctx, JSONArray holderArray) throws JSONException{
@@ -126,5 +130,38 @@ public class CreateDatabaseScript {
         }
 
         return jsonArray;
+    }
+
+    private static void emailRealm(Context ctx){
+        // init realm
+        Realm realm = Realm.getInstance(ctx);
+
+        File exportRealmFile = null;
+        try {
+            // get or create an "export.realm" file
+            exportRealmFile = new File(ctx.getExternalCacheDir(), "export.realm");
+
+            // if "export.realm" already exists, delete
+            exportRealmFile.delete();
+
+            // copy current realm to "export.realm"
+            realm.writeCopyTo(exportRealmFile);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        realm.close();
+
+        // init email intent and add export.realm as attachment
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("plain/text");
+        intent.putExtra(Intent.EXTRA_EMAIL, "ross.feehan@yahoo.com");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "realm data");
+        intent.putExtra(Intent.EXTRA_TEXT, "realm data");
+        Uri u = Uri.fromFile(exportRealmFile);
+        intent.putExtra(Intent.EXTRA_STREAM, u);
+
+        // start email intent
+        ctx.startActivity(Intent.createChooser(intent, "YOUR CHOOSER TITLE"));
     }
 }
