@@ -11,7 +11,7 @@ import javax.inject.Inject;
 import dagger.ObjectGraph;
 import ross.feehan.crossfit.strengthcalculator.model.models.modelDIModule;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.PresenterDIModule;
-import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateDatabase;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CheckAndCreateDatabaseIfNeeded;
 
 /**
  * Created by Ross Feehan on 30/04/2015.
@@ -19,7 +19,8 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateDataba
  */
 public class StrengthCalculatorApplication extends Application{
 
-    @Inject CreateDatabase createDatabase;
+    @Inject
+    CheckAndCreateDatabaseIfNeeded createDatabase;
     private ObjectGraph objectGraph;
 
     @Override

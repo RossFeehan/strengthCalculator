@@ -7,7 +7,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import ross.feehan.crossfit.strengthcalculator.model.models.BenchPressStandardAccessor;
-import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateDatabase;
+import ross.feehan.crossfit.strengthcalculator.model.models.CreateDatabase;
 import ross.feehan.crossfit.strengthcalculator.view.StrengthCalculatorApplication;
 
 /**
@@ -18,7 +18,7 @@ import ross.feehan.crossfit.strengthcalculator.view.StrengthCalculatorApplicatio
         complete = false)
 public class PresenterDIModule {
 
-    private CreateDatabase createDatabase;
+    private CheckAndCreateDatabaseIfNeeded checkAndCreateDatabaseIfNeeded;
     private Context ctx;
 
     public PresenterDIModule(Context context){
@@ -26,8 +26,10 @@ public class PresenterDIModule {
     }
 
     @Provides @Singleton
-    public CreateDatabase provideCreateDatabase(BenchPressStandardAccessor benchPressStandardAccessor){
+    public CheckAndCreateDatabaseIfNeeded provideCreateDatabase(BenchPressStandardAccessor benchPressStandardAccessor,
+                                                  CreateDatabase createDatabase){
 
-        return createDatabase = new CreateDatabase(ctx, benchPressStandardAccessor);
+        return checkAndCreateDatabaseIfNeeded = new CheckAndCreateDatabaseIfNeeded(ctx,
+                benchPressStandardAccessor, createDatabase);
     }
 }

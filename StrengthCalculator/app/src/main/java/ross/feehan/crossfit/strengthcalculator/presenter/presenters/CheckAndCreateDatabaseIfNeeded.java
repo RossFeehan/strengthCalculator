@@ -8,22 +8,27 @@ import java.util.ArrayList;
 import javax.inject.Inject;
 
 import ross.feehan.crossfit.strengthcalculator.model.modelInterfaces.BenchPressStandardAccessorInterface;
+import ross.feehan.crossfit.strengthcalculator.model.modelInterfaces.CreateDatabaseInterface;
 import ross.feehan.crossfit.strengthcalculator.model.models.BenchPressStandardAccessor;
+import ross.feehan.crossfit.strengthcalculator.model.models.CreateDatabase;
 import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
 
 /**
  * Created by Ross Feehan on 30/04/2015.
  * Copyright Ross Feehan
  */
-public class CreateDatabase implements BenchPressStandardAccessorInterface{
+public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccessorInterface, CreateDatabaseInterface {
 
     private Context ctx;
     @Inject BenchPressStandardAccessor benchPressStandardAccessor;
+    @Inject CreateDatabase createDatabase;
 
 
-    public CreateDatabase(Context ctx, BenchPressStandardAccessor benchPressStandardAccessor){
+    public CheckAndCreateDatabaseIfNeeded(Context ctx, BenchPressStandardAccessor benchPressStandardAccessor,
+                                    CreateDatabase createDatabase){
         this.ctx = ctx;
         this.benchPressStandardAccessor = benchPressStandardAccessor;
+        this.createDatabase = createDatabase;
     }
 
     public void createDatabase() {
@@ -41,7 +46,19 @@ public class CreateDatabase implements BenchPressStandardAccessorInterface{
         }
         else{
             //create database
-            Toast.makeText(ctx, "DB Needs to be made", Toast.LENGTH_LONG).show();
+            createDatabase.createDatabase(this);
+        }
+    }
+
+    @Override
+    public void wasDatabaseCreated(boolean wasCreated) {
+        if(wasCreated){
+            Toast.makeText(ctx, "Database Created", Toast.LENGTH_LONG).show();
+            //call back through interface here
+        }
+        else{
+            Toast.makeText(ctx, "Database Not Created", Toast.LENGTH_LONG).show();
+            //call back through interface goes here
         }
     }
 }

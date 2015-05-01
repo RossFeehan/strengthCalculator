@@ -17,7 +17,7 @@ public class BenchPressStandardAccessor {
         this.ctx = ctx;
     }
 
-    public void GetAllBenchPressStandards( BenchPressStandardAccessorInterface accessorInterface){
+    public void GetAllBenchPressStandards(BenchPressStandardAccessorInterface accessorInterface){
 
         accessorInterface.receiveAllBenchPressStandards(
                 BenchPressStandardRealmDBCursor.getAllBenchPressStandards(ctx));
