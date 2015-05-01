@@ -12,6 +12,7 @@ import ross.feehan.crossfit.strengthcalculator.model.modelInterfaces.CreateDatab
 import ross.feehan.crossfit.strengthcalculator.model.models.BenchPressStandardAccessor;
 import ross.feehan.crossfit.strengthcalculator.model.models.CreateDatabase;
 import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CheckAndCreateDatabaseIfNeededInterface;
 
 /**
  * Created by Ross Feehan on 30/04/2015.
@@ -22,6 +23,7 @@ public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccesso
     private Context ctx;
     @Inject BenchPressStandardAccessor benchPressStandardAccessor;
     @Inject CreateDatabase createDatabase;
+    private CheckAndCreateDatabaseIfNeededInterface checkDatabaseInterface;
 
 
     public CheckAndCreateDatabaseIfNeeded(Context ctx, BenchPressStandardAccessor benchPressStandardAccessor,
@@ -31,8 +33,9 @@ public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccesso
         this.createDatabase = createDatabase;
     }
 
-    public void createDatabase() {
+    public void createDatabase(CheckAndCreateDatabaseIfNeededInterface checkDatabaseInterface) {
 
+        this.checkDatabaseInterface = checkDatabaseInterface;
         //get all bench press standards, they will be returned to the BenchPressStandardAccessorInterface
         //method in the below INTERFACES section.
         benchPressStandardAccessor.GetAllBenchPressStandards(this);
@@ -42,7 +45,7 @@ public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccesso
     public void receiveAllBenchPressStandards(ArrayList<BenchPressStandard> benchPressStandards) {
         if(benchPressStandards != null){
             //return that the database is created through interface method
-            Toast.makeText(ctx, "DB Created",Toast.LENGTH_LONG).show();
+            checkDatabaseInterface.databaseAlreadyCreated();
         }
         else{
             //create database
@@ -53,12 +56,13 @@ public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccesso
     @Override
     public void wasDatabaseCreated(boolean wasCreated) {
         if(wasCreated){
-            Toast.makeText(ctx, "Database Created", Toast.LENGTH_LONG).show();
             //call back through interface here
+            checkDatabaseInterface.databaseCreated();
         }
         else{
-            Toast.makeText(ctx, "Database Not Created", Toast.LENGTH_LONG).show();
             //call back through interface goes here
+            checkDatabaseInterface.databaseFailedToBeCreated();
         }
+
     }
 }
