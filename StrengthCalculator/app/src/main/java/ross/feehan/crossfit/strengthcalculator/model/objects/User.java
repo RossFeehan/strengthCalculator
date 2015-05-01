@@ -19,7 +19,7 @@ public class User extends RealmObject {
     public void setPreferedUnits(String preferedUnits) {
         this.preferedUnits = preferedUnits;
     }
-    
+
     public void setSex(String sex) {
         this.sex = sex;
     }
