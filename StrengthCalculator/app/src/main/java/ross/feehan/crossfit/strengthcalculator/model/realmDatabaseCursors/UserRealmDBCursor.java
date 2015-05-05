@@ -14,7 +14,7 @@ import ross.feehan.crossfit.strengthcalculator.model.objects.User;
  */
 public class UserRealmDBCursor {
 
-    public User getUserDetails(Context ctx){
+    public static User getUserDetails(Context ctx){
 
         User userDetails;
         Realm realm = Realm.getInstance(ctx);
@@ -25,7 +25,7 @@ public class UserRealmDBCursor {
         return userDetails= (User)userRealmObject;
     }
 
-    public void setUserDetails(Context ctx, User user){
+    public static void setUserDetails(Context ctx, User user){
 
         Realm realm = Realm.getInstance(ctx);
 
