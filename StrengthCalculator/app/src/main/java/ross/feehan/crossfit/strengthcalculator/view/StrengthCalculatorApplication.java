@@ -1,6 +1,7 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
 import android.app.Application;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.widget.Toast;
 
@@ -79,11 +80,12 @@ public class StrengthCalculatorApplication extends Application implements CheckA
 
     @Override
     public void receiveIsUserCreated(boolean isUserCreated) {
-        if(isUserCreated){
-            Toast.makeText(this, "User Created", Toast.LENGTH_LONG).show();
-        }
-        else{
+        if(!isUserCreated){
             Toast.makeText(this, "User Not Created", Toast.LENGTH_LONG).show();
+            Intent intent = new Intent(this, SetUpUserDetails.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+
         }
     }
 }
