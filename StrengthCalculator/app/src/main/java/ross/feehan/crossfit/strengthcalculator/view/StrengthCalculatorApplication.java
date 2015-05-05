@@ -57,15 +57,18 @@ public class StrengthCalculatorApplication extends Application implements CheckA
     @Override
     public void databaseCreated() {
         Toast.makeText(this, "Database Created", Toast.LENGTH_LONG).show();
+        //check for user
     }
 
     @Override
     public void databaseAlreadyCreated() {
         Toast.makeText(this, "Database Already Created", Toast.LENGTH_LONG).show();
+        //check for user
     }
 
     @Override
     public void databaseFailedToBeCreated() {
         Toast.makeText(this, "Database failed to be created", Toast.LENGTH_LONG).show();
+        //display error message
     }
 }

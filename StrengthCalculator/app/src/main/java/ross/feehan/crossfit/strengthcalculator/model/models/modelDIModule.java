@@ -20,10 +20,12 @@ public class modelDIModule {
 
     private BenchPressStandardAccessor benchPressStandardAccessor;
     private CreateDatabase createDatabase;
+    private UserAccessor userAccessor;
 
     public modelDIModule(Context ctx) {
         benchPressStandardAccessor = new BenchPressStandardAccessor(ctx);
         createDatabase = new CreateDatabase(ctx);
+        userAccessor = new UserAccessor(ctx);
     }
 
     @Provides @Singleton
@@ -34,6 +36,11 @@ public class modelDIModule {
     @Provides @Singleton
     public CreateDatabase provideCreateDatabase(){
         return createDatabase;
+    }
+
+    @Provides @Singleton
+    public UserAccessor provideUserAccessor(){
+        return userAccessor;
     }
 
 }
