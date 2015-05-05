@@ -12,10 +12,11 @@ import javax.inject.Inject;
 
 import dagger.ObjectGraph;
 import ross.feehan.crossfit.strengthcalculator.model.models.modelDIModule;
+import ross.feehan.crossfit.strengthcalculator.model.objects.ObjectDIModules;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CheckAndCreateDatabaseIfNeededInterface;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CheckForUserInterface;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CheckForUser;
-import ross.feehan.crossfit.strengthcalculator.presenter.presenters.PresenterDIModule;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.PresenterDIModules;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CheckAndCreateDatabaseIfNeeded;
 
 /**
@@ -39,7 +40,12 @@ public class StrengthCalculatorApplication extends Application implements CheckA
     }
 
     private List<Object> getModules(){
-        return Arrays.<Object>asList(new modelDIModule(this), new PresenterDIModule(this));
+        return Arrays.<Object>asList(new modelDIModule(this), new PresenterDIModules(this),
+                new ObjectDIModules());
+    }
+
+    public ObjectGraph getObjectGraph(){
+        return objectGraph;
     }
 
     @Override
@@ -82,7 +88,7 @@ public class StrengthCalculatorApplication extends Application implements CheckA
     public void receiveIsUserCreated(boolean isUserCreated) {
         if(!isUserCreated){
             Toast.makeText(this, "User Not Created", Toast.LENGTH_LONG).show();
-            Intent intent = new Intent(this, SetUpUserDetails.class);
+            Intent intent = new Intent(this, SetUpUserDetails_Activity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
 

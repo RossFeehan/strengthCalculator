@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".view.SetUpUserDetails"/>
+        <activity android:name=".view.SetUpUserDetails_Activity"/>
 
     </application>
 

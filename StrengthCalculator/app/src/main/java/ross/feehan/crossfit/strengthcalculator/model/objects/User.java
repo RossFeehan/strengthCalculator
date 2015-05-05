@@ -9,6 +9,8 @@ import io.realm.RealmObject;
 public class User extends RealmObject {
 
     private String preferedUnits, sex;
+    public final static String SEXMALE = "Male", SEXFEMALE = "Female",
+            KGUNIT = "KG", LBSUNIT = "LBS";
 
     //CONSTRUCTORS
     public User(){
