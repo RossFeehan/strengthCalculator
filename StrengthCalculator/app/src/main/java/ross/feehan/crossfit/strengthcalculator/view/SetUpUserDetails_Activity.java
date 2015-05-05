@@ -48,13 +48,6 @@ public class SetUpUserDetails_Activity extends Activity {
             actionBar.hide();
         }
 
-        if(createUser == null){
-            Toast.makeText(ctx, "Create User NULL", Toast.LENGTH_LONG).show();
-        }
-        else{
-            Toast.makeText(ctx, "Create User NOT NULL", Toast.LENGTH_LONG).show();
-        }
-
     }
 
     @OnClick(R.id.lbsRBTN)
@@ -62,7 +55,8 @@ public class SetUpUserDetails_Activity extends Activity {
         //make the kgs radio btn not clicked
         kgsRadioBTN.setChecked(false);
 
-        //call business logic here
+        //set units to lbs
+        createUser.setUserWeightToLbs();
     }
 
     @OnClick(R.id.kgsRBTN)
@@ -70,14 +64,16 @@ public class SetUpUserDetails_Activity extends Activity {
         //make the Lbs radio btn not clicked
         lbsRadioBTN.setChecked(false);
 
-        //call business logic here
+        //set units to kgs
+        createUser.setUserWeightToKgs();
     }
     @OnClick(R.id.maleRBTN)
     public void onMaleRadioBTNClicked(){
         //make the female radio btn not clicked
         femaleRadioBTN.setChecked(false);
 
-        //call business logic here
+        //set sex to male
+        createUser.setUserAsMale();
     }
 
     @OnClick(R.id.femaleRBTN)
@@ -85,7 +81,13 @@ public class SetUpUserDetails_Activity extends Activity {
         //make the male radio btn not clicked
         maleRadioBTN.setChecked(false);
 
-        //call business logic here
+        //set sex to female
+        createUser.setUserAsFemale();
+    }
+
+    @OnClick(R.id.nextBTN)
+    public void onNextBTNClicked(){
+        createUser.createUser();
     }
 
 

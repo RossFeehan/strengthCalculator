@@ -9,13 +9,14 @@ import dagger.Module;
 import dagger.Provides;
 import ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors.CreateDatabaseScript;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CheckAndCreateDatabaseIfNeeded;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
 
 /**
  * Created by Ross Feehan on 30/04/2015.
  * Copyright Ross Feehan
  */
 
-@Module(injects = {CheckAndCreateDatabaseIfNeeded.class},
+@Module(injects = {CheckAndCreateDatabaseIfNeeded.class, CreateUser.class},
         library = true)
 public class modelDIModule {
 

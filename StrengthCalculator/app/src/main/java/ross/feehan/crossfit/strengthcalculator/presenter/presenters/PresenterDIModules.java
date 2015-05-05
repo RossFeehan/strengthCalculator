@@ -44,7 +44,7 @@ public class PresenterDIModules {
     }
 
     @Provides @Singleton
-    public CreateUser provideCreateUser(User user){
-        return createUser = new CreateUser(ctx, user);
+    public CreateUser provideCreateUser(User user, UserAccessor userAccessor){
+        return createUser = new CreateUser(ctx, user, userAccessor);
     }
 }
