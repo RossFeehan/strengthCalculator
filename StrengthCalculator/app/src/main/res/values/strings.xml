@@ -2,6 +2,9 @@
     <string name="app_name">Strength Calculator</string>
 
     <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
-    <string name="userDetails">User Details</string>
+    <string name="welcome">Welcome</string>
+    <string name="lbs">Lbs</string>
+    <string name="kgs">Kgs</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
 </resources>
