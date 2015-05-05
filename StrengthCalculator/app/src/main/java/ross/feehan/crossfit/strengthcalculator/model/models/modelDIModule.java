@@ -15,7 +15,8 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CheckAndCrea
  * Copyright Ross Feehan
  */
 
-@Module(injects = {CheckAndCreateDatabaseIfNeeded.class})
+@Module(injects = {CheckAndCreateDatabaseIfNeeded.class},
+        library = true)
 public class modelDIModule {
 
     private BenchPressStandardAccessor benchPressStandardAccessor;

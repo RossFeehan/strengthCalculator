@@ -8,6 +8,7 @@ import dagger.Module;
 import dagger.Provides;
 import ross.feehan.crossfit.strengthcalculator.model.models.BenchPressStandardAccessor;
 import ross.feehan.crossfit.strengthcalculator.model.models.CreateDatabase;
+import ross.feehan.crossfit.strengthcalculator.model.models.UserAccessor;
 import ross.feehan.crossfit.strengthcalculator.view.StrengthCalculatorApplication;
 
 /**
@@ -19,6 +20,7 @@ import ross.feehan.crossfit.strengthcalculator.view.StrengthCalculatorApplicatio
 public class PresenterDIModule {
 
     private CheckAndCreateDatabaseIfNeeded checkAndCreateDatabaseIfNeeded;
+    private CheckForUser checkForUser;
     private Context ctx;
 
     public PresenterDIModule(Context context){
@@ -31,5 +33,10 @@ public class PresenterDIModule {
 
         return checkAndCreateDatabaseIfNeeded = new CheckAndCreateDatabaseIfNeeded(ctx,
                 benchPressStandardAccessor, createDatabase);
+    }
+
+    @Provides @Singleton
+    public CheckForUser provideCheckForUser(UserAccessor userAccessor){
+         return checkForUser = new CheckForUser(ctx, userAccessor);
     }
 }
