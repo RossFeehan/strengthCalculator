@@ -1,4 +1,4 @@
-package ross.feehan.crossfit.strengthcalculator.model.realmDatabase;
+package ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors;
 
 import android.content.Context;
 

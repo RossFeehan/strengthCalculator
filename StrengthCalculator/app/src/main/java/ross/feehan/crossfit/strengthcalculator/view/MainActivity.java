@@ -1,14 +1,22 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
+import android.app.Activity;
 import android.content.Context;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
+import java.io.File;
+import java.io.IOException;
+
+import io.realm.Realm;
 import ross.feehan.crossfit.strengthcalculator.R;
-import ross.feehan.crossfit.strengthcalculator.model.realmDatabase.CreateDatabaseScript;
 
-
-public class MainActivity extends ActionBarActivity {
+/**
+ * Created by Ross Feehan on 30/04/2015.
+ * Copyright Ross Feehan
+ */
+public class MainActivity extends Activity{
 
     private Context ctx;
 
@@ -19,11 +27,6 @@ public class MainActivity extends ActionBarActivity {
 
         this.ctx = this;
 
-        CreateDatabaseScript createDatabase = new CreateDatabaseScript();
-        createDatabase.createDatabase(ctx);
     }
-
-
-
 
 }

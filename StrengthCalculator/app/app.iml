@@ -87,22 +87,30 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="appcompat-v7-22.0.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-core-2.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="javax.annotation-api-1.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="runner-0.2" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="exposed-instrumentation-api-publish-0.2" level="project" />
     <orderEntry type="library" exported="" name="realm-android-0.80.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="javax.inject-1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-library-1.1" level="project" />
-    <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
+    <orderEntry type="library" exported="" name="material-ripple-1.0.2" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-integration-1.1" level="project" />
     <orderEntry type="library" exported="" name="support-annotations-22.0.0" level="project" />
+    <orderEntry type="library" exported="" name="butterknife-6.1.0" level="project" />
+    <orderEntry type="library" exported="" name="gson-1.7.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="rules-0.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="mockito-core-1.10.19" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="jsr305-2.0.1" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="objenesis-2.1" level="project" />
+    <orderEntry type="library" exported="" name="dagger-1.2.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="javax.annotation-api-1.2" level="project" />
+    <orderEntry type="library" exported="" scope="TEST" name="exposed-instrumentation-api-publish-0.2" level="project" />
+    <orderEntry type="library" exported="" name="javax.inject-1" level="project" />
+    <orderEntry type="library" exported="" name="support-v4-22.0.0" level="project" />
+    <orderEntry type="library" exported="" name="guava-15.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="junit-dep-4.10" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="javawriter-2.1.1" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="hamcrest-core-1.1" level="project" />
-    <orderEntry type="library" exported="" name="gson-1.7.1" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="rules-0.2" level="project" />
-    <orderEntry type="library" exported="" scope="TEST" name="jsr305-2.0.1" level="project" />
+    <orderEntry type="library" exported="" name="javawriter-2.5.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-idling-resource-2.1" level="project" />
+    <orderEntry type="library" exported="" name="dagger-compiler-1.2.2" level="project" />
   </component>
 </module>
 
