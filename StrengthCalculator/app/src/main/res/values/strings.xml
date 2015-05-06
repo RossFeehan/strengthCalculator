@@ -6,6 +6,9 @@
     <string name="kgs">Kgs</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+
+    <!-- Tool Bar Headers !-->
     <string name="strengthHistory">Strength History</string>
+    <string name="newCalculations">New Calculation</string>
 
 </resources>

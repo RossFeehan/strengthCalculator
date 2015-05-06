@@ -20,6 +20,9 @@
 
         <activity android:name=".view.SetUpUserDetails_Activity"/>
 
+        <activity android:name=".view.NewCalculations"
+            android:label="@string/newCalculations"/>
+
     </application>
 
 </manifest>

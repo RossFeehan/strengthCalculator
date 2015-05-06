@@ -31,6 +31,7 @@ public class SetUpUserDetails_Activity_Tests {
     @Rule
     public ActivityTestRule activityRule = new ActivityTestRule(SetUpUserDetails_Activity.class);
 
+    //Test to check that everything is displayed correctly on screen when opened
     @Test
     public void checkInitialLayout(){
 
