@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#e0e0e0">
+    android:background="@color/mainGrey">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="#0d47a1">
+        android:background="@color/mainColor">
 
         <TextView
             android:id="@+id/welcomeTV"
@@ -71,22 +72,35 @@
 
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/nextBTN"
+    //Action Button and Ripple
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_alignParentRight="true"
         android:layout_marginTop="225dp"
         android:layout_marginRight="50dp"
-        android:background="@drawable/floating_action_button">
+        app:mrl_rippleColor="@color/actionButtonRipple"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleRoundedCorners="30dp"
+        app:mrl_rippleDuration="1000"
+        app:mrl_rippleAlpha=".6">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true"
-            android:src="@mipmap/ic_keyboard_arrow_right_white_36dp"/>
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/nextBTN"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/floating_action_button">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_keyboard_arrow_right_white_36dp"/>
+
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
 
 
 </RelativeLayout>

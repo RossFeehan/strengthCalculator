@@ -85,7 +85,6 @@ public class StrengthCalculatorApplication extends Application implements CheckA
     @Override
     public void receiveIsUserCreated(boolean isUserCreated) {
         if(!isUserCreated){
-            Toast.makeText(this, "User Not Created", Toast.LENGTH_LONG).show();
             Intent intent = new Intent(this, SetUpUserDetails_Activity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
