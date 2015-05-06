@@ -30,7 +30,8 @@
             android:text="@string/lbs"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:buttonTint="#FFFFFF"/>
+            android:buttonTint="#FFFFFF"
+            android:button="@drawable/radio_button_layout"/>
 
         <RadioButton
             android:id="@+id/kgsRBTN"
@@ -43,7 +44,8 @@
             android:text="@string/kgs"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:buttonTint="#FFFFFF"/>
+            android:buttonTint="#FFFFFF"
+            android:button="@drawable/radio_button_layout"/>
 
         <RadioButton
             android:id="@+id/maleRBTN"
@@ -55,7 +57,8 @@
             android:text="@string/male"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:buttonTint="#FFFFFF"/>
+            android:buttonTint="#FFFFFF"
+            android:button="@drawable/radio_button_layout"/>
 
         <RadioButton
             android:id="@+id/femaleRBTN"
@@ -68,7 +71,8 @@
             android:text="@string/female"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            android:buttonTint="#FFFFFF"/>
+            android:buttonTint="#FFFFFF"
+            android:button="@drawable/radio_button_layout"/>
 
     </RelativeLayout>
 
