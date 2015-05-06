@@ -1,11 +1,12 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
 
+
 import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
@@ -22,7 +23,7 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
  * Created by Ross Feehan on 05/05/2015.
  * Copyright Ross Feehan
  */
-public class SetUpUserDetails_Activity extends Activity implements CreateUserInterface  {
+public class SetUpUserDetails_Activity extends ActionBarActivity implements CreateUserInterface  {
 
     private Context ctx;
     @InjectView(R.id.lbsRBTN) RadioButton lbsRadioBTN;
@@ -42,11 +43,6 @@ public class SetUpUserDetails_Activity extends Activity implements CreateUserInt
         //For Dependency Injection
         ((StrengthCalculatorApplication)getApplication()).getObjectGraph().inject(this);
 
-        ActionBar actionBar = getActionBar();
-
-        if(actionBar != null){
-            actionBar.hide();
-        }
 
     }
 

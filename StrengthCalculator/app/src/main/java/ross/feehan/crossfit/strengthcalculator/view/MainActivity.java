@@ -1,22 +1,18 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
-import android.app.Activity;
+
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 
-import java.io.File;
-import java.io.IOException;
-
-import io.realm.Realm;
 import ross.feehan.crossfit.strengthcalculator.R;
 
 /**
  * Created by Ross Feehan on 30/04/2015.
  * Copyright Ross Feehan
  */
-public class MainActivity extends Activity{
+public class MainActivity extends ActionBarActivity{
 
     private Context ctx;
 
@@ -26,6 +22,9 @@ public class MainActivity extends Activity{
         setContentView(R.layout.activity_main);
 
         this.ctx = this;
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
 
     }
 
