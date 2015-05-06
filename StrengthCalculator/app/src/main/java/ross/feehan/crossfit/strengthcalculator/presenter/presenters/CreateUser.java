@@ -5,6 +5,7 @@ import android.content.Context;
 import ross.feehan.crossfit.strengthcalculator.model.models.CreateDatabase;
 import ross.feehan.crossfit.strengthcalculator.model.models.UserAccessor;
 import ross.feehan.crossfit.strengthcalculator.model.objects.User;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CreateUserInterface;
 
 /**
  * Created by Ross Feehan on 05/05/2015.
@@ -39,6 +40,18 @@ public class CreateUser {
         newUserDetails.setPreferedUnits(User.KGUNIT);
     }
 
-    public void createUser(){
+    public void createUser(CreateUserInterface createUserInterface){
+
+        if(newUserDetails.getPreferedUnits() == null){
+            createUserInterface.userMeasurementUnitsNotSet();
+        }
+        else if(newUserDetails.getSex() == null){
+            createUserInterface.userSexNotSetError();
+        }
+        else{
+            //create user in Realm DB
+            userAccessor.saveUserDetails(newUserDetails);
+            createUserInterface.userCreated();
+        }
     }
 }

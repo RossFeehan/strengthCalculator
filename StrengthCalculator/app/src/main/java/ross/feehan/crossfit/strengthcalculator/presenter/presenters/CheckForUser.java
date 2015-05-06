@@ -27,7 +27,8 @@ public class CheckForUser {
         if(userDetails != null){
             checkForUserInterface.receiveIsUserCreated(true);
         }
-
-        checkForUserInterface.receiveIsUserCreated(false);
+        else{
+            checkForUserInterface.receiveIsUserCreated(false);
+        }
     }
 }

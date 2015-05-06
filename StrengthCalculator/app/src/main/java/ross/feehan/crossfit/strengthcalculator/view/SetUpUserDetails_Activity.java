@@ -7,6 +7,7 @@ import android.app.Application;
 import android.content.Context;
 import android.os.Bundle;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import javax.inject.Inject;
@@ -16,13 +17,14 @@ import butterknife.InjectView;
 import butterknife.OnClick;
 import ross.feehan.crossfit.strengthcalculator.R;
 import ross.feehan.crossfit.strengthcalculator.model.objects.User;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CreateUserInterface;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
 
 /**
  * Created by Ross Feehan on 05/05/2015.
  * Copyright Ross Feehan
  */
-public class SetUpUserDetails_Activity extends Activity {
+public class SetUpUserDetails_Activity extends Activity implements CreateUserInterface  {
 
     private Context ctx;
     @InjectView(R.id.lbsRBTN) RadioButton lbsRadioBTN;
@@ -87,10 +89,23 @@ public class SetUpUserDetails_Activity extends Activity {
 
     @OnClick(R.id.nextBTN)
     public void onNextBTNClicked(){
-        createUser.createUser();
+        createUser.createUser(this);
     }
 
+    //INTERFACE METHODS
 
+    @Override
+    public void userSexNotSetError() {
+        Toast.makeText(ctx, "Please select your sex", Toast.LENGTH_LONG).show();
+    }
 
+    @Override
+    public void userMeasurementUnitsNotSet() {
+        Toast.makeText(ctx, "Please select weight units", Toast.LENGTH_LONG).show();
+    }
 
+    @Override
+    public void userCreated() {
+        //open main activity
+    }
 }

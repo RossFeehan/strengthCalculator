@@ -66,14 +66,12 @@ public class StrengthCalculatorApplication extends Application implements CheckA
     //INTERFACE METHODS
     @Override
     public void databaseCreated() {
-        Toast.makeText(this, "Database Created", Toast.LENGTH_LONG).show();
         //check for user
         checkForUser.isUserCreated(this);
     }
 
     @Override
     public void databaseAlreadyCreated() {
-        Toast.makeText(this, "Database Already Created", Toast.LENGTH_LONG).show();
         //check for user
         checkForUser.isUserCreated(this);
     }
