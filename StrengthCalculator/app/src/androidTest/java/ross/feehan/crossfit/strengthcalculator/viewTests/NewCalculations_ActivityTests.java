@@ -74,9 +74,6 @@ public class NewCalculations_ActivityTests {
         //enter text into weight Edit Text
         onView(withId(R.id.weightET)).perform(typeText(String.valueOf(WEIGHTTEXT)));
 
-        //click the reps Edit Text so weight Edit Text loses focus
-        onView(withId(R.id.repsET)).perform(click());
-
         //check to see the weight unit text is now visible
         onView(withId(R.id.weightTV)).check(matches(isDisplayed()));
     }
