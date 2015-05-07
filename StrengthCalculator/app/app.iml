@@ -111,6 +111,7 @@
     <orderEntry type="library" exported="" name="javawriter-2.5.0" level="project" />
     <orderEntry type="library" exported="" scope="TEST" name="espresso-idling-resource-2.1" level="project" />
     <orderEntry type="library" exported="" name="dagger-compiler-1.2.2" level="project" />
+    <orderEntry type="library" exported="" name="cardview-v7-22.1.1" level="project" />
   </component>
 </module>
 

@@ -34,7 +34,7 @@ public class MainActivity extends ActionBarActivity{
 
     @OnClick(R.id.addBTN)
     public void onNextBTNClicked(){
-        Intent intent = new Intent(this, NewCalculations.class);
+        Intent intent = new Intent(this, NewCalculations_Activity.class);
         startActivity(intent);
 
     }

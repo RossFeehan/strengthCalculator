@@ -20,7 +20,7 @@
 
         <activity android:name=".view.SetUpUserDetails_Activity"/>
 
-        <activity android:name=".view.NewCalculations"
+        <activity android:name=".view.NewCalculations_Activity"
             android:label="@string/newCalculations"/>
 
     </application>

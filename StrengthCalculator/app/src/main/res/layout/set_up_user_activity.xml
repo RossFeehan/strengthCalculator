@@ -86,6 +86,7 @@
         android:layout_marginRight="50dp"
         app:mrl_rippleColor="@color/actionButtonRipple"
         app:mrl_rippleOverlay="true"
+        app:mrl_rippleDelayClick="false"
         app:mrl_rippleRoundedCorners="30dp"
         app:mrl_rippleDuration="1000"
         app:mrl_rippleAlpha=".6">
