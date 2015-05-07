@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--Action Button and Ripple!-->
+    <com.balysv.materialripple.MaterialRippleLayout
+        android:id="@+id/ripple"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:mrl_rippleColor="@color/actionButtonRipple"
+        app:mrl_rippleOverlay="true"
+        app:mrl_rippleDelayClick="false"
+        app:mrl_rippleRoundedCorners="30dp"
+        app:mrl_rippleDuration="1000"
+        app:mrl_rippleAlpha=".6">
+
+        <RelativeLayout
+            android:id="@+id/addBTN"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@drawable/floating_action_button">
+
+            <ImageView
+                android:id="@+id/actionBTNIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_add_white_36dp"/>
+
+        </RelativeLayout>
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</LinearLayout>

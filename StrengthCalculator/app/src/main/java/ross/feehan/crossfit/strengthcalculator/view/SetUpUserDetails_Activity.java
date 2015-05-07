@@ -1,14 +1,13 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
 
+
 import android.app.ActionBar;
-import android.app.Activity;
-import android.app.Application;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.widget.RadioButton;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import javax.inject.Inject;
@@ -17,7 +16,6 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 import butterknife.OnClick;
 import ross.feehan.crossfit.strengthcalculator.R;
-import ross.feehan.crossfit.strengthcalculator.model.objects.User;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CreateUserInterface;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
 
@@ -25,7 +23,7 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
  * Created by Ross Feehan on 05/05/2015.
  * Copyright Ross Feehan
  */
-public class SetUpUserDetails_Activity extends Activity implements CreateUserInterface  {
+public class SetUpUserDetails_Activity extends ActionBarActivity implements CreateUserInterface  {
 
     private Context ctx;
     @InjectView(R.id.lbsRBTN) RadioButton lbsRadioBTN;
@@ -45,11 +43,6 @@ public class SetUpUserDetails_Activity extends Activity implements CreateUserInt
         //For Dependency Injection
         ((StrengthCalculatorApplication)getApplication()).getObjectGraph().inject(this);
 
-        ActionBar actionBar = getActionBar();
-
-        if(actionBar != null){
-            actionBar.hide();
-        }
 
     }
 
@@ -111,5 +104,6 @@ public class SetUpUserDetails_Activity extends Activity implements CreateUserInt
         Intent intent = new Intent(this, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
+        overridePendingTransition(R.anim.activity_slide_left_onto_screen, R.anim.activity_slide_left_off_screen);
     }
 }

@@ -2,6 +2,7 @@
 <resources>
 
     <color name="mainColor">#0d47a1</color>
+    <color name="mainColorDark">#093170</color>
     <color name="mainGrey">#e0e0e0</color>
     <color name="actionButtonYellow">#fdd835</color>
     <color name="actionButtonRipple">#bdbdbd</color>

@@ -1,10 +1,18 @@
 <resources>
     <string name="app_name">Strength Calculator</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="welcome">Welcome</string>
     <string name="lbs">Lbs</string>
     <string name="kgs">Kgs</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
+    <string name="benchPress">Bench Press</string>
+    <string name="reps">Reps</string>
+    <string name="forHowMany">for</string>
+    <string name="weight">Weight</string>
+
+    <!-- Tool Bar Headers !-->
+    <string name="strengthHistory">Strength History</string>
+    <string name="newCalculations">New Calculation</string>
+
 </resources>
