@@ -32,6 +32,7 @@
                    android:layout_width="match_parent"
                    android:layout_height="match_parent">
 
+                   <!--Header Text View !-->
                    <TextView
                        android:id="@+id/benchPressHeaderTV"
                        android:layout_width="wrap_content"
@@ -41,6 +42,7 @@
                        android:textColor="#303233"
                        android:textSize="20sp"/>
 
+                   <!--Layout that holds the edit texts!-->
                    <LinearLayout
                        android:layout_width="270dp"
                        android:layout_height="wrap_content"
@@ -51,7 +53,7 @@
                        android:weightSum="2">
 
                        <EditText
-                           android:id="@+id/repsET"
+                           android:id="@+id/benchPressRepsET"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:gravity="center"
@@ -64,10 +66,10 @@
                            android:singleLine="true"
                            android:inputType="number"
                            android:layout_weight="1"
-                           android:nextFocusDown="@+id/weightET"/>
+                           android:nextFocusDown="@+id/benchPressWeightET"/>
 
                        <TextView
-                           android:id="@+id/repsTV"
+                           android:id="@+id/benchPressRepsTV"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_marginLeft="-30dp"
@@ -77,7 +79,7 @@
                            android:visibility="invisible"/>
 
                        <TextView
-                           android:id="@+id/forTV"
+                           android:id="@+id/benchPressForTV"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:text="@string/forHowMany"
@@ -87,7 +89,7 @@
                            android:visibility="invisible"/>
 
                        <EditText
-                           android:id="@+id/weightET"
+                           android:id="@+id/benchPressWeightET"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:gravity="center"
@@ -100,10 +102,11 @@
                            android:ems="3"
                            android:singleLine="true"
                            android:inputType="number"
-                           android:layout_weight="1"/>
+                           android:layout_weight="1"
+                           android:imeOptions="actionDone"/>
 
                        <TextView
-                           android:id="@+id/weightTV"
+                           android:id="@+id/benchPressWeightTV"
                            android:layout_width="wrap_content"
                            android:layout_height="wrap_content"
                            android:layout_marginRight="10dp"
@@ -114,10 +117,112 @@
                            android:visibility="invisible"/>
 
                    </LinearLayout>
-
                </RelativeLayout>
-
            </android.support.v7.widget.CardView>
+
+            <!--Squat Card Layout!-->
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/squatCV"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/benchPressCV"
+                android:layout_marginTop="10dp"
+                card_view:cardCornerRadius="4dp">
+
+                <!--layout for squat card view !-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!--Header Text View !-->
+                    <TextView
+                        android:id="@+id/squatHeaderTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:text="@string/squat"
+                        android:textColor="#303233"
+                        android:textSize="20sp"/>
+
+                    <!--Layout that holds the edit texts!-->
+                    <LinearLayout
+                        android:layout_width="270dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/squatHeaderTV"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="17dp"
+                        android:orientation="horizontal"
+                        android:weightSum="2">
+
+                        <EditText
+                            android:id="@+id/squatRepsET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:hint="@string/reps"
+                            android:maxLength="3"
+                            android:background="@null"
+                            android:textColor="#303233"
+                            android:textSize="20sp"
+                            android:ems="2"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:layout_weight="1"
+                            android:nextFocusDown="@+id/squatWeightET"/>
+
+                        <TextView
+                            android:id="@+id/squatRepsTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="-30dp"
+                            android:text="@string/reps"
+                            android:textSize="20sp"
+                            android:textColor="#303233"
+                            android:visibility="invisible"/>
+
+                        <TextView
+                            android:id="@+id/squatForTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/forHowMany"
+                            android:layout_marginLeft="10dp"
+                            android:textSize="20sp"
+                            android:textColor="#303233"
+                            android:visibility="invisible"/>
+
+                        <EditText
+                            android:id="@+id/squatWeightET"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginLeft="-30dp"
+                            android:hint="@string/weight"
+                            android:background="@null"
+                            android:maxLength="6"
+                            android:textColor="#303233"
+                            android:textSize="20sp"
+                            android:ems="3"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:layout_weight="1"
+                            android:imeOptions="actionDone"/>
+
+                        <TextView
+                            android:id="@+id/squatWeightTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginLeft="-40dp"
+                            android:text="@string/kgs"
+                            android:textSize="20sp"
+                            android:textColor="#303233"
+                            android:visibility="invisible"/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
 
         </RelativeLayout>
     </ScrollView>

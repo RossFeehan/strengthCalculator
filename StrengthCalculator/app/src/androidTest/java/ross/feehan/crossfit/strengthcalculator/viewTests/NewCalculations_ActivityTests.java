@@ -38,30 +38,30 @@ public class NewCalculations_ActivityTests {
     public void checkInitialLayout(){
 
         //both Edit Texts are visible
-        onView(withId(R.id.repsET)).check(matches(isDisplayed()));
-        onView(withId(R.id.weightET)).check(matches(isDisplayed()));
+        onView(withId(R.id.benchPressRepsET)).check(matches(isDisplayed()));
+        onView(withId(R.id.benchPressWeightET)).check(matches(isDisplayed()));
 
         //that the resp Edit Text has focus
-        onView(withId(R.id.repsET)).check(matches(hasFocus()));
+        onView(withId(R.id.benchPressRepsET)).check(matches(hasFocus()));
 
         //all text views relating to Edit Texts are hidden
-        onView(withId(R.id.repsTV)).check(matches(not(isDisplayed())));
-        onView(withId(R.id.forTV)).check(matches(not(isDisplayed())));
-        onView(withId(R.id.weightTV)).check(matches(not(isDisplayed())));
+        onView(withId(R.id.benchPressRepsTV)).check(matches(not(isDisplayed())));
+        onView(withId(R.id.benchPressForTV)).check(matches(not(isDisplayed())));
+        onView(withId(R.id.benchPressWeightTV)).check(matches(not(isDisplayed())));
     }
 
     @Test
     public void checkTextViewsDisplayWhenWeightETHasFocus(){
 
         //when weight Edit Text has focus
-        onView(withId(R.id.weightET)).perform(click()).check(matches(hasFocus()));
+        onView(withId(R.id.benchPressWeightET)).perform(click()).check(matches(hasFocus()));
 
         //the text views are displayed
-        onView(withId(R.id.repsTV)).check(matches(isDisplayed()));
-        onView(withId(R.id.forTV)).check(matches(isDisplayed()));
+        onView(withId(R.id.benchPressRepsTV)).check(matches(isDisplayed()));
+        onView(withId(R.id.benchPressForTV)).check(matches(isDisplayed()));
 
         //the weight unit is not displayed
-        onView(withId(R.id.weightTV)).check(matches(not(isDisplayed())));
+        onView(withId(R.id.benchPressWeightTV)).check(matches(not(isDisplayed())));
     }
 
     @Test
@@ -70,11 +70,11 @@ public class NewCalculations_ActivityTests {
         final int WEIGHTTEXT = 60;
 
         //click the weight Edit Text
-        onView(withId(R.id.weightET)).perform(click()).check(matches(hasFocus()));
+        onView(withId(R.id.benchPressWeightET)).perform(click()).check(matches(hasFocus()));
         //enter text into weight Edit Text
-        onView(withId(R.id.weightET)).perform(typeText(String.valueOf(WEIGHTTEXT)));
+        onView(withId(R.id.benchPressWeightET)).perform(typeText(String.valueOf(WEIGHTTEXT)));
 
         //check to see the weight unit text is now visible
-        onView(withId(R.id.weightTV)).check(matches(isDisplayed()));
+        onView(withId(R.id.benchPressWeightTV)).check(matches(isDisplayed()));
     }
 }
