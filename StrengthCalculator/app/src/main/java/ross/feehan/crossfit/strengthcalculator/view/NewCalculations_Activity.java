@@ -53,6 +53,13 @@ public class NewCalculations_Activity extends ActionBarActivity{
     @InjectView(R.id.deadLiftForTV)TextView deadLiftForHowManyTV;
     @InjectView(R.id.deadLiftWeightTV)TextView deadLiftWeightTV;
 
+    //overHeadPress card view views
+    @InjectView(R.id.overHeadPressRepsET)EditText overHeadPressRepsET;
+    @InjectView(R.id.overHeadPressWeightET)EditText overHeadPressWeightET;
+    @InjectView(R.id.overHeadPressRepsTV)TextView overHeadPressRepsTV;
+    @InjectView(R.id.overHeadPressForTV)TextView overHeadPressForHowManyTV;
+    @InjectView(R.id.overHeadPressWeightTV)TextView overHeadPressWeightTV;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -75,21 +82,25 @@ public class NewCalculations_Activity extends ActionBarActivity{
         weightEditTexts.add(benchPressWeightET);
         weightEditTexts.add(squatWeightET);
         weightEditTexts.add(deadLiftWeightET);
+        weightEditTexts.add(overHeadPressWeightET);
 
         //reps text views
         repsTextViews.add(benchPressRepsTV);
         repsTextViews.add(squatRepsTV);
         repsTextViews.add(deadLiftRepsTV);
+        repsTextViews.add(overHeadPressRepsTV);
 
         //for how many text views
         forTextViews.add(benchPressForHowManyTV);
         forTextViews.add(squatForHowManyTV);
         forTextViews.add(deadLiftForHowManyTV);
+        forTextViews.add(overHeadPressForHowManyTV);
 
         //weight text views
         weightTextViews.add(benchPressWeightTV);
         weightTextViews.add(squatWeightTV);
         weightTextViews.add(deadLiftWeightTV);
+        weightTextViews.add(overHeadPressWeightTV);
 
     }
 
