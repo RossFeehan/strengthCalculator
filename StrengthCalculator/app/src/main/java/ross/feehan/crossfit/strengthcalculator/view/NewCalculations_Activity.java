@@ -46,6 +46,13 @@ public class NewCalculations_Activity extends ActionBarActivity{
     @InjectView(R.id.squatForTV)TextView squatForHowManyTV;
     @InjectView(R.id.squatWeightTV)TextView squatWeightTV;
 
+    //deadLift card view views
+    @InjectView(R.id.deadLiftRepsET)EditText deadLiftRepsET;
+    @InjectView(R.id.deadLiftWeightET)EditText deadLiftWeightET;
+    @InjectView(R.id.deadLiftRepsTV)TextView deadLiftRepsTV;
+    @InjectView(R.id.deadLiftForTV)TextView deadLiftForHowManyTV;
+    @InjectView(R.id.deadLiftWeightTV)TextView deadLiftWeightTV;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -67,18 +74,22 @@ public class NewCalculations_Activity extends ActionBarActivity{
         //weight edit texts
         weightEditTexts.add(benchPressWeightET);
         weightEditTexts.add(squatWeightET);
+        weightEditTexts.add(deadLiftWeightET);
 
         //reps text views
         repsTextViews.add(benchPressRepsTV);
         repsTextViews.add(squatRepsTV);
+        repsTextViews.add(deadLiftRepsTV);
 
         //for how many text views
         forTextViews.add(benchPressForHowManyTV);
         forTextViews.add(squatForHowManyTV);
+        forTextViews.add(deadLiftForHowManyTV);
 
         //weight text views
         weightTextViews.add(benchPressWeightTV);
         weightTextViews.add(squatWeightTV);
+        weightTextViews.add(deadLiftWeightTV);
 
     }
 
