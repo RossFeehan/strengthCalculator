@@ -3,14 +3,18 @@ package ross.feehan.crossfit.strengthcalculator.view;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +23,8 @@ import java.util.ArrayList;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ross.feehan.crossfit.strengthcalculator.R;
+import ross.feehan.crossfit.strengthcalculator.view.widgets.CustomActionButtonView;
+import ross.feehan.crossfit.strengthcalculator.view.widgets.StrengthCardView;
 
 /**
  * Created by Ross Feehan on 06/05/2015.
@@ -31,34 +37,14 @@ public class NewCalculations_Activity extends ActionBarActivity{
     private ArrayList<TextView> repsTextViews = new ArrayList<TextView>();
     private ArrayList<TextView> forTextViews = new ArrayList<TextView>();
     private ArrayList<TextView> weightTextViews = new ArrayList<TextView>();
+    private ArrayList<RelativeLayout> repLayouts = new ArrayList<RelativeLayout>();
 
-    //bench press card view views
-    @InjectView(R.id.benchPressRepsET)EditText benchPressRepsET;
-    @InjectView(R.id.benchPressWeightET)EditText benchPressWeightET;
-    @InjectView(R.id.benchPressRepsTV)TextView benchPressRepsTV;
-    @InjectView(R.id.benchPressForTV)TextView benchPressForHowManyTV;
-    @InjectView(R.id.benchPressWeightTV)TextView benchPressWeightTV;
+    //bench press card view view
+    @InjectView (R.id.benchPressCV)CardView benchPressCV;
 
-    //squat card view views
-    @InjectView(R.id.squatRepsET)EditText squatRepsET;
-    @InjectView(R.id.squatWeightET)EditText squatWeightET;
-    @InjectView(R.id.squatRepsTV)TextView squatRepsTV;
-    @InjectView(R.id.squatForTV)TextView squatForHowManyTV;
-    @InjectView(R.id.squatWeightTV)TextView squatWeightTV;
-
-    //deadLift card view views
-    @InjectView(R.id.deadLiftRepsET)EditText deadLiftRepsET;
-    @InjectView(R.id.deadLiftWeightET)EditText deadLiftWeightET;
-    @InjectView(R.id.deadLiftRepsTV)TextView deadLiftRepsTV;
-    @InjectView(R.id.deadLiftForTV)TextView deadLiftForHowManyTV;
-    @InjectView(R.id.deadLiftWeightTV)TextView deadLiftWeightTV;
-
-    //overHeadPress card view views
-    @InjectView(R.id.overHeadPressRepsET)EditText overHeadPressRepsET;
-    @InjectView(R.id.overHeadPressWeightET)EditText overHeadPressWeightET;
-    @InjectView(R.id.overHeadPressRepsTV)TextView overHeadPressRepsTV;
-    @InjectView(R.id.overHeadPressForTV)TextView overHeadPressForHowManyTV;
-    @InjectView(R.id.overHeadPressWeightTV)TextView overHeadPressWeightTV;
+    //action button layouts
+    StrengthCardView benchPressCardView;
+    @InjectView(R.id.includeActionButton)RelativeLayout firstActionButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -66,41 +52,36 @@ public class NewCalculations_Activity extends ActionBarActivity{
         setContentView(R.layout.new_calculations_layout);
 
         this.ctx = this;
-
         ButterKnife.inject(this);
+
+        setUpActionButton();
+        setUpCardViews();
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
         setSupportActionBar(toolbar);
 
         createViewArrayLists();
         buttonClicks();
+
     }
 
     private void createViewArrayLists(){
 
+        //TODO USE VIEW LISTS FROM BUTTERKNIFE INSTEAD OF SETTING UP THESE ARRAYS
         //weight edit texts
-        weightEditTexts.add(benchPressWeightET);
-        weightEditTexts.add(squatWeightET);
-        weightEditTexts.add(deadLiftWeightET);
-        weightEditTexts.add(overHeadPressWeightET);
+        weightEditTexts.add(benchPressCardView.weightET);
 
         //reps text views
-        repsTextViews.add(benchPressRepsTV);
-        repsTextViews.add(squatRepsTV);
-        repsTextViews.add(deadLiftRepsTV);
-        repsTextViews.add(overHeadPressRepsTV);
+        repsTextViews.add(benchPressCardView.repsTV);
 
         //for how many text views
-        forTextViews.add(benchPressForHowManyTV);
-        forTextViews.add(squatForHowManyTV);
-        forTextViews.add(deadLiftForHowManyTV);
-        forTextViews.add(overHeadPressForHowManyTV);
+        forTextViews.add(benchPressCardView.forHowManyTV);
 
         //weight text views
-        weightTextViews.add(benchPressWeightTV);
-        weightTextViews.add(squatWeightTV);
-        weightTextViews.add(deadLiftWeightTV);
-        weightTextViews.add(overHeadPressWeightTV);
+        weightTextViews.add(benchPressCardView.weightTV);
+
+        //one rep max layouts
+        repLayouts.add(benchPressCardView.oneRepMaxLayout);
 
     }
 
@@ -147,6 +128,10 @@ public class NewCalculations_Activity extends ActionBarActivity{
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         Toast.makeText(ctx, "GET 1RM", Toast.LENGTH_SHORT).show();
                         hideKeyboard();
+
+                        //displayOneRepMaxLayout(repLayouts.get(iAsFinal));
+
+                        //save strength details to database here straight away
                     }
 
                     return true;
@@ -156,6 +141,13 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
     }
 
+    private void displayOneRepMaxLayout(RelativeLayout oneRepMaxLayout){
+        Animation anim = AnimationUtils.loadAnimation(ctx, R.anim.one_rep_max_dropdown);
+        oneRepMaxLayout.setAnimation(anim);
+
+        oneRepMaxLayout.setVisibility(View.VISIBLE);
+    }
+
     private void hideKeyboard() {
         // Check if no view has focus:
         View view = this.getCurrentFocus();
@@ -163,5 +155,20 @@ public class NewCalculations_Activity extends ActionBarActivity{
             InputMethodManager inputManager = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);
             inputManager.hideSoftInputFromWindow(view.getWindowToken(), InputMethodManager.HIDE_NOT_ALWAYS);
         }
+    }
+
+    private void setUpActionButton(){
+        CustomActionButtonView actionBTN = new CustomActionButtonView(firstActionButton);
+        actionBTN.actionButtonImageView.setBackgroundResource(R.mipmap.ic_save_white_36dp);
+
+
+    }
+
+    private void setUpCardViews(){
+
+        benchPressCardView = new StrengthCardView(benchPressCV);
+        benchPressCardView.progressBar.setMax(200);
+        benchPressCardView.progressBar.setProgress(60);
+
     }
 }

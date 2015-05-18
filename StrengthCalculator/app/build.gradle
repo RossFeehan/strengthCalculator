@@ -40,6 +40,7 @@ dependencies {
     provided 'com.squareup.dagger:dagger-compiler:1.2.+'
     compile 'com.jakewharton:butterknife:6.1.0'
     compile 'com.balysv:material-ripple:1.0.2'
+    compile 'com.akexorcist:RoundCornerProgressBar:1.1.0'
 
     //TESTING DEPENDENCIES
     androidTestCompile 'com.android.support.test:runner:0.2'

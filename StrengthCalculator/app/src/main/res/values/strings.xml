@@ -13,6 +13,7 @@
     <string name="reps">Reps</string>
     <string name="forHowMany">for</string>
     <string name="weight">Weight</string>
+    <string name="repMax">1 Rep Max</string>
 
     <!-- Tool Bar Headers !-->
     <string name="strengthHistory">Strength History</string>
