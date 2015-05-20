@@ -1,7 +1,6 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
 import android.content.Context;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -38,7 +37,7 @@ public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccesso
         this.checkDatabaseInterface = checkDatabaseInterface;
         //get all bench press standards, they will be returned to the BenchPressStandardAccessorInterface
         //method in the below INTERFACES section.
-        benchPressStandardAccessor.GetAllBenchPressStandards(this);
+        benchPressStandardAccessor.getAllBenchPressStandards(this);
     }
 
     @Override

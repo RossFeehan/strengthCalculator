@@ -48,5 +48,20 @@ public class BenchPressStandardRealmDBCursor {
         return benchPressStandards;
     }
 
+    public static int getEliteWeightBasedOnUserWeight(Context ctx, int usersWeight){
+
+        Realm realm = Realm.getInstance(ctx);
+
+        RealmQuery query = realm.where(BenchPressStandard.class)
+                                .lessThan("bodyWeight", usersWeight);
+
+        RealmResults<BenchPressStandard> results = query.findAll();
+
+        //get the last result in the RealmResults
+        BenchPressStandard benchPressStandard = results.last();
+
+        return benchPressStandard.getElite();
+    }
+
 
 }

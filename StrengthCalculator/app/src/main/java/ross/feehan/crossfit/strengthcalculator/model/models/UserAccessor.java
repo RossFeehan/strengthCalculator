@@ -32,4 +32,8 @@ public class UserAccessor {
     public String getUserPreferedUnits(){
         return UserRealmDBCursor.getUserPreferedUnits(ctx);
     }
+
+    public double getUserWeight(){
+        return UserRealmDBCursor.getUserWeight(ctx);
+    }
 }

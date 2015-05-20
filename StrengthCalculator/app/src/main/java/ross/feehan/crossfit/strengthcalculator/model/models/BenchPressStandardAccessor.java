@@ -17,10 +17,19 @@ public class BenchPressStandardAccessor {
         this.ctx = ctx;
     }
 
-    public void GetAllBenchPressStandards(BenchPressStandardAccessorInterface accessorInterface){
+    public void getAllBenchPressStandards(BenchPressStandardAccessorInterface accessorInterface){
 
         accessorInterface.receiveAllBenchPressStandards(
                 BenchPressStandardRealmDBCursor.getAllBenchPressStandards(ctx));
+    }
+
+    public void getEliteWeightBasedOnUsersWeight(){
+
+        //get the users weight
+
+        //get the elite weight based on the users weight
+
+        //return the elite weight
     }
 
 }
