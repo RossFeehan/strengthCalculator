@@ -30,6 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/exerciseHeaderTV"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="17dp"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -106,7 +107,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/userInputLayout"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="15dp"
+            android:visibility="gone">
 
             <View
                 android:layout_width="300dp"
@@ -124,16 +126,121 @@
                 android:textColor="#303233"
                 android:textSize="20sp"/>
 
-            <com.akexorcist.roundcornerprogressbar.RoundCornerProgressBar
+            <TextView
+                android:id="@+id/oneRepMaxTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/repMaxHeader"
+                android:layout_marginTop="5dp"
+                android:textColor="#303233"
+                android:text="104kg"
+                android:textSize="20sp" />
+
+            <ross.feehan.crossfit.strengthcalculator.view.widgets.CustomProgress
                 android:id="@+id/progressBar"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_below="@id/repMaxHeader"
+                android:layout_below="@id/oneRepMaxTV"
                 android:layout_marginTop="5dp"
-                android:layout_marginBottom="10dp"
-                android:layout_centerHorizontal="true"
-                app:rcBackgroundPadding="5dp"
-                app:rcBackgroundRadius="10dp"/>
+                android:layout_centerHorizontal="true"/>
+
+            <!--Novice Layout !-->
+            <RelativeLayout
+               android:id="@+id/noviceLayout"
+               android:layout_width="130dp"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/oneRepMaxTV"
+               android:layout_marginTop="5dp"
+               android:gravity="right"
+               android:layout_weight="1">
+
+               <View
+                 android:id="@+id/noviceBreakLine"
+                 android:layout_width="2dp"
+                 android:layout_height="50dp"
+                 android:background="#FFFFFF"/>
+
+               <TextView
+                 android:id="@+id/noviceHeaderTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="55dp"
+                 android:layout_marginLeft="-20dp"
+                 android:text="@string/novice"
+                 android:textSize="13sp"/>
+
+               <TextView
+                 android:id="@+id/noviceWeightTV"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_below="@id/noviceHeaderTV"
+                 android:layout_marginLeft="-20dp"
+                 android:text="78kg"/>
+            </RelativeLayout>
+
+            <!--skilled Layout !-->
+            <RelativeLayout
+                android:id="@+id/skilledLayout"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/noviceLayout"
+                android:layout_below="@id/oneRepMaxTV"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:layout_weight="1">
+
+                <View
+                    android:id="@+id/skilledBreakLine"
+                    android:layout_width="2dp"
+                    android:layout_height="50dp"
+                    android:background="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/skilledHeaderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:layout_marginLeft="-20dp"
+                    android:text="@string/skilled"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/skilledWeightTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/skilledHeaderTV"
+                    android:layout_marginLeft="-20dp"
+                    android:text="130kg"/>
+            </RelativeLayout>
+
+            <!--elite Layout !-->
+            <RelativeLayout
+                android:id="@+id/eliteLayout"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/skilledLayout"
+                android:layout_below="@id/oneRepMaxTV"
+                android:layout_marginTop="5dp"
+                android:gravity="right"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/eliteHeaderTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="55dp"
+                    android:text="@string/elite"
+                    android:textSize="13sp"/>
+
+                <TextView
+                    android:id="@+id/eliteWeightTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/eliteHeaderTV"
+                    android:layout_marginLeft="-20dp"
+                    android:text="164 + kg"/>
+            </RelativeLayout>
 
 
         </RelativeLayout>

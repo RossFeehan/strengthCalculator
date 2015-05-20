@@ -1,6 +1,7 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
@@ -126,10 +127,9 @@ public class NewCalculations_Activity extends ActionBarActivity{
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
-                        Toast.makeText(ctx, "GET 1RM", Toast.LENGTH_SHORT).show();
                         hideKeyboard();
 
-                        //displayOneRepMaxLayout(repLayouts.get(iAsFinal));
+                        displayOneRepMaxLayout(repLayouts.get(iAsFinal));
 
                         //save strength details to database here straight away
                     }
@@ -142,10 +142,17 @@ public class NewCalculations_Activity extends ActionBarActivity{
     }
 
     private void displayOneRepMaxLayout(RelativeLayout oneRepMaxLayout){
-        Animation anim = AnimationUtils.loadAnimation(ctx, R.anim.one_rep_max_dropdown);
+
+        /*benchPressCardView.progressBar.setBackgroundColor(Color.parseColor("#E0E0E0"));
+        benchPressCardView.progressBar.setProgressColor(Color.parseColor("#0d47a1"));*/
+
+        benchPressCardView.progressBar.setMaximumPercentage(0.53f);
+
+        Animation anim = AnimationUtils.loadAnimation(ctx, R.anim.one_rep_max_fade_in);
         oneRepMaxLayout.setAnimation(anim);
 
         oneRepMaxLayout.setVisibility(View.VISIBLE);
+
     }
 
     private void hideKeyboard() {
@@ -167,8 +174,7 @@ public class NewCalculations_Activity extends ActionBarActivity{
     private void setUpCardViews(){
 
         benchPressCardView = new StrengthCardView(benchPressCV);
-        benchPressCardView.progressBar.setMax(200);
-        benchPressCardView.progressBar.setProgress(60);
+
 
     }
 }

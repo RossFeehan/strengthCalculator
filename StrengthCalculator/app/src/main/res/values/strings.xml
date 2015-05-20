@@ -14,6 +14,11 @@
     <string name="forHowMany">for</string>
     <string name="weight">Weight</string>
     <string name="repMax">1 Rep Max</string>
+    <string name="untrained">Untrained</string>
+    <string name="novice">Novice</string>
+    <string name="skilled">Skilled</string>
+    <string name="advanced">Advanced</string>
+    <string name="elite">Elite</string>
 
     <!-- Tool Bar Headers !-->
     <string name="strengthHistory">Strength History</string>
