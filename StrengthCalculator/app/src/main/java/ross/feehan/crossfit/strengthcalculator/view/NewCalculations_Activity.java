@@ -143,11 +143,6 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
     private void displayOneRepMaxLayout(RelativeLayout oneRepMaxLayout){
 
-        /*benchPressCardView.progressBar.setBackgroundColor(Color.parseColor("#E0E0E0"));
-        benchPressCardView.progressBar.setProgressColor(Color.parseColor("#0d47a1"));*/
-
-        benchPressCardView.progressBar.setMaximumPercentage(0.53f);
-
         Animation anim = AnimationUtils.loadAnimation(ctx, R.anim.one_rep_max_fade_in);
         oneRepMaxLayout.setAnimation(anim);
 
@@ -174,7 +169,6 @@ public class NewCalculations_Activity extends ActionBarActivity{
     private void setUpCardViews(){
 
         benchPressCardView = new StrengthCardView(benchPressCV);
-
 
     }
 }

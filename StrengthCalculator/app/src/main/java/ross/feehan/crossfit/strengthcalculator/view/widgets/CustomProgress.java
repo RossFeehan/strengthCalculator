@@ -175,6 +175,10 @@ public class CustomProgress extends TextView {
         width = 0;
     }
 
+    public void setWidth(int width){
+        this.width = width;
+    }
+
     /**
      * Set the maximum percentage for the progress
      * @param percentage
