@@ -21,37 +21,10 @@
             android:textSize="28sp"/>
 
         <RadioButton
-            android:id="@+id/lbsRBTN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/welcomeTV"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="70dp"
-            android:text="@string/lbs"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:buttonTint="#FFFFFF"
-            android:button="@drawable/radio_button_layout"/>
-
-        <RadioButton
-            android:id="@+id/kgsRBTN"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/welcomeTV"
-            android:layout_toRightOf="@id/lbsRBTN"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="60dp"
-            android:text="@string/kgs"
-            android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:buttonTint="#FFFFFF"
-            android:button="@drawable/radio_button_layout"/>
-
-        <RadioButton
             android:id="@+id/maleRBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lbsRBTN"
+            android:layout_below="@id/welcomeTV"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="70dp"
             android:text="@string/male"
@@ -64,7 +37,7 @@
             android:id="@+id/femaleRBTN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/lbsRBTN"
+            android:layout_below="@id/welcomeTV"
             android:layout_toRightOf="@id/maleRBTN"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="50dp"
@@ -73,6 +46,52 @@
             android:textSize="20sp"
             android:buttonTint="#FFFFFF"
             android:button="@drawable/radio_button_layout"/>
+
+        <RadioButton
+            android:id="@+id/lbsRBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maleRBTN"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="70dp"
+            android:text="@string/lbs"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:buttonTint="#FFFFFF"
+            android:button="@drawable/radio_button_layout"/>
+
+        <RadioButton
+            android:id="@+id/kgsRBTN"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maleRBTN"
+            android:layout_toRightOf="@id/lbsRBTN"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="60dp"
+            android:text="@string/kgs"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:buttonTint="#FFFFFF"
+            android:button="@drawable/radio_button_layout"/>
+
+        <EditText
+            android:id="@+id/weightET"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lbsRBTN"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:hint="@string/weight"
+            android:maxLength="6"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#99FFFFFF"
+            android:textSize="20sp"
+            android:ems="3"
+            android:singleLine="true"
+            android:inputType="number"
+            android:layout_weight="1"
+            android:imeOptions="actionDone"/>
 
     </RelativeLayout>
 

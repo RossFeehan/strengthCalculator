@@ -40,6 +40,7 @@ public class SetUpUserDetails_Activity_Tests {
         onView(withId(R.id.maleRBTN)).check(matches(isDisplayed()));
         onView(withId(R.id.femaleRBTN)).check(matches(isDisplayed()));
         onView(withId(R.id.nextBTN)).check(matches(isDisplayed()));
+        onView(withId(R.id.weightET)).check(matches(isDisplayed()));
 
     }
 
@@ -74,4 +75,6 @@ public class SetUpUserDetails_Activity_Tests {
         onView(withId(R.id.femaleRBTN)).perform(click()).check(matches(isChecked()));
         onView(withId(R.id.maleRBTN)).check(matches(isNotChecked()));
     }
+
+
 }

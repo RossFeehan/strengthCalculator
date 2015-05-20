@@ -40,7 +40,9 @@ public class CreateUser {
         newUserDetails.setPreferedUnits(User.KGUNIT);
     }
 
-    public void createUser(CreateUserInterface createUserInterface){
+    public void createUser(CreateUserInterface createUserInterface, double weight){
+
+        newUserDetails.setWeight(weight);
 
         if(newUserDetails.getPreferedUnits() == null){
             createUserInterface.userMeasurementUnitsNotSet();
