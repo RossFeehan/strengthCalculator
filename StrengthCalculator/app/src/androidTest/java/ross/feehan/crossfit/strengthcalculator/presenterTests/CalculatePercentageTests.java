@@ -23,13 +23,13 @@ public class CalculatePercentageTests {
 
     @Test
     public void firstCalculatePercentageTest(){
-        int result = CalculatePercentage.calculatePercentage(50, 100);
-        assertThat(result, is(equalTo(50)));
+        double result = CalculatePercentage.calculatePercentage(50, 100);
+        assertThat(result, is(equalTo(0.5)));
     }
 
     @Test
     public void secondCalculatePercentageTest(){
-        int result = CalculatePercentage.calculatePercentage(104, 164);
-        assertThat(result, is(equalTo(63)));
+        double result = CalculatePercentage.calculatePercentage(104, 164);
+        assertThat(result, is(equalTo(.63)));
     }
 }

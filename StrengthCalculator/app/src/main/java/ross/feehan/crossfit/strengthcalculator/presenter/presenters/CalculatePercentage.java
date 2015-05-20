@@ -1,19 +1,20 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
+import java.text.DecimalFormat;
+
 /**
  * Created by Ross Feehan on 20/05/2015.
  * Copyright Ross Feehan
  */
 public class CalculatePercentage {
 
-    private final static int PERCENTAGECALCULATION = 100;
 
-    public static int calculatePercentage(double firstNumber, double secondNumber){
+    public static double calculatePercentage(double firstNumber, double secondNumber){
 
+        DecimalFormat decimalFormat = new DecimalFormat("#.00");
         double difference = firstNumber/secondNumber;
 
-        double result = difference*PERCENTAGECALCULATION;
+        return Double.parseDouble(decimalFormat.format(difference));
 
-        return (int)result;
     }
 }
