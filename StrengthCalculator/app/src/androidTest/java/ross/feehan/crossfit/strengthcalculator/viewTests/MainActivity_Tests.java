@@ -31,6 +31,6 @@ public class MainActivity_Tests {
     @Test
     public void checkIntialLayout(){
         onView(withId(R.id.toolbar_main)).check(matches(isDisplayed()));
-        onView(withId(R.id.addBTN)).check(matches(isDisplayed()));
+        onView(withId(R.id.customActionBTNLayout)).check(matches(isDisplayed()));
     }
 }

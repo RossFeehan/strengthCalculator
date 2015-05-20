@@ -8,8 +8,6 @@ import io.realm.RealmObject;
  */
 public class BenchPressStandard extends RealmObject {
 
-
-
     private int bodyWeight, untrained, novice, intermediate, advanced, elite;
     private String sex, unitOfWeight;
     public final static String SEXMALE = "Male", SEXFEMALE = "Female",

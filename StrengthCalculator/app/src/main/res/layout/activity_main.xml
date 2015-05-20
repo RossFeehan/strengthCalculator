@@ -8,7 +8,9 @@
     <include layout="@layout/toolbar"/>
 
     <!-- Floating Action button !-->
-   <include layout="@layout/floating_action_button"
+   <include
+       android:id="@+id/mainActivityActionBTN"
+       layout="@layout/floating_action_button"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:layout_alignParentBottom="true"

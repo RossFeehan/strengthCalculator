@@ -2,12 +2,12 @@ package ross.feehan.crossfit.strengthcalculator.view;
 
 
 
-import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import javax.inject.Inject;
@@ -18,6 +18,7 @@ import butterknife.OnClick;
 import ross.feehan.crossfit.strengthcalculator.R;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CreateUserInterface;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
+import ross.feehan.crossfit.strengthcalculator.view.widgets.CustomActionButtonView;
 
 /**
  * Created by Ross Feehan on 05/05/2015.
@@ -30,6 +31,7 @@ public class SetUpUserDetails_Activity extends ActionBarActivity implements Crea
     @InjectView(R.id.kgsRBTN)RadioButton kgsRadioBTN;
     @InjectView(R.id.maleRBTN)RadioButton maleRadioBTN;
     @InjectView(R.id.femaleRBTN) RadioButton femaleRadioBTN;
+    @InjectView(R.id.nextBTN)RelativeLayout nextBtn;
     @Inject CreateUser createUser;
 
     @Override
@@ -43,6 +45,7 @@ public class SetUpUserDetails_Activity extends ActionBarActivity implements Crea
         //For Dependency Injection
         ((StrengthCalculatorApplication)getApplication()).getObjectGraph().inject(this);
 
+        setUpActionButton();
 
     }
 
@@ -81,9 +84,15 @@ public class SetUpUserDetails_Activity extends ActionBarActivity implements Crea
         createUser.setUserAsFemale();
     }
 
-    @OnClick(R.id.nextBTN)
+    @OnClick(R.id.customActionBTNLayout)
     public void onNextBTNClicked(){
+
         createUser.createUser(this);
+    }
+
+    private void setUpActionButton(){
+        CustomActionButtonView nextBTN = new CustomActionButtonView(nextBtn);
+        nextBTN.actionButtonImageView.setBackgroundResource(R.mipmap.ic_keyboard_arrow_right_white_36dp);
     }
 
     //INTERFACE METHODS
