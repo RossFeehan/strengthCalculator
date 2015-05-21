@@ -8,6 +8,7 @@ import javax.inject.Singleton;
 import dagger.Module;
 import dagger.Provides;
 import ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors.CreateDatabaseScript;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.BenchPressStandardPresenter;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CheckAndCreateDatabaseIfNeeded;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CreateUser;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.UserDetails;
@@ -17,23 +18,27 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenters.UserDetails;
  * Copyright Ross Feehan
  */
 
-@Module(injects = {CheckAndCreateDatabaseIfNeeded.class, CreateUser.class, UserDetails.class},
-        library = true)
+@Module(injects = {CheckAndCreateDatabaseIfNeeded.class, CreateUser.class, UserDetails.class,
+                    BenchPressStandardPresenter.class},
+        library = true,
+        complete = false)
 public class modelDIModule {
 
+    private Context ctx;
     private BenchPressStandardAccessor benchPressStandardAccessor;
     private CreateDatabase createDatabase;
     private UserAccessor userAccessor;
 
     public modelDIModule(Context ctx) {
-        benchPressStandardAccessor = new BenchPressStandardAccessor(ctx);
+        this.ctx = ctx;
         createDatabase = new CreateDatabase(ctx);
         userAccessor = new UserAccessor(ctx);
     }
 
     @Provides @Singleton
-    public BenchPressStandardAccessor provideBenchPressStandardAccessor(){
-        return benchPressStandardAccessor;
+    public BenchPressStandardAccessor provideBenchPressStandardAccessor(UserAccessor userAccessor){
+        return benchPressStandardAccessor = new BenchPressStandardAccessor(ctx, userAccessor);
+
     }
 
     @Provides @Singleton

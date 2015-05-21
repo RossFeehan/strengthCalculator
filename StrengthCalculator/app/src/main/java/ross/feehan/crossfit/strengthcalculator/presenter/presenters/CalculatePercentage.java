@@ -9,10 +9,10 @@ import java.text.DecimalFormat;
 public class CalculatePercentage {
 
 
-    public static double calculatePercentage(double firstNumber, double secondNumber){
+    public static double calculatePercentage(double oneRepMax, double eliteWeight){
 
         DecimalFormat decimalFormat = new DecimalFormat("#.00");
-        double difference = firstNumber/secondNumber;
+        double difference = oneRepMax/eliteWeight;
 
         return Double.parseDouble(decimalFormat.format(difference));
 

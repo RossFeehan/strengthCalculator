@@ -23,8 +23,6 @@ public class MainActivity extends ActionBarActivity{
     private Context ctx;
     @InjectView(R.id.mainActivityActionBTN)RelativeLayout mainActivityActionBTN;
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

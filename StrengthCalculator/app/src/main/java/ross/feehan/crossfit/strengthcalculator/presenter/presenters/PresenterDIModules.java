@@ -28,6 +28,7 @@ public class PresenterDIModules {
     private CheckForUser checkForUser;
     private CreateUser createUser;
     private UserDetails userDetails;
+    private BenchPressStandardPresenter benchPressStandardPresenter;
     private Context ctx;
 
     public PresenterDIModules(Context context){
@@ -55,5 +56,10 @@ public class PresenterDIModules {
     @Provides @Singleton
     public UserDetails provideUserDetails(UserAccessor userAccessor){
         return userDetails = new UserDetails(ctx, userAccessor);
+    }
+
+    @Provides @Singleton
+    public BenchPressStandardPresenter provideBenchPressStandardPresenter(BenchPressStandardAccessor benchPressStandardAccessor){
+        return benchPressStandardPresenter = new BenchPressStandardPresenter(ctx, benchPressStandardAccessor);
     }
 }

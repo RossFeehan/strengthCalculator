@@ -12,9 +12,11 @@ import ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors.BenchP
 public class BenchPressStandardAccessor {
 
     private Context ctx;
+    private UserAccessor userAccessor;
 
-    public BenchPressStandardAccessor(Context ctx){
+    public BenchPressStandardAccessor(Context ctx, UserAccessor userAccessor){
         this.ctx = ctx;
+        this.userAccessor = userAccessor;
     }
 
     public void getAllBenchPressStandards(BenchPressStandardAccessorInterface accessorInterface){
@@ -23,15 +25,23 @@ public class BenchPressStandardAccessor {
                 BenchPressStandardRealmDBCursor.getAllBenchPressStandards(ctx));
     }
 
-    public void getEliteWeightBasedOnUsersWeight(){
+    public int getEliteWeightBasedOnUsersWeight(){
 
         //get the users weight
+        double usersWeight = userAccessor.getUserWeight();
+
+        //get users sex
+        String sex = userAccessor.getUsersSex();
 
         //get the users preferd units of weight
+        String preferedUnits = userAccessor.getUserPreferedUnits();
 
         //get the elite weight based on the users weight
+        int eliteWeight = BenchPressStandardRealmDBCursor.getEliteWeightBasedOnUserWeightPreferdUnitsAndSex(ctx,
+                (int)usersWeight, sex, preferedUnits);
 
         //return the elite weight
+        return eliteWeight;
     }
 
 }

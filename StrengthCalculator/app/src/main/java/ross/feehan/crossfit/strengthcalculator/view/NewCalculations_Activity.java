@@ -24,7 +24,9 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ross.feehan.crossfit.strengthcalculator.R;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.BenchPressStandardPresenter;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CalculateOneRepMax;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CalculatePercentage;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.UserDetails;
 import ross.feehan.crossfit.strengthcalculator.view.widgets.CustomActionButtonView;
 import ross.feehan.crossfit.strengthcalculator.view.widgets.CustomProgress;
@@ -49,6 +51,7 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
     //Dependency Injection
     @Inject UserDetails userDetails;
+    @Inject BenchPressStandardPresenter benchPressStandardPresenter;
 
 
     @Override
@@ -62,7 +65,6 @@ public class NewCalculations_Activity extends ActionBarActivity{
         setUpCardViews();
         createViewArrayLists();
         buttonClicks();
-
 
     }
 
@@ -120,9 +122,10 @@ public class NewCalculations_Activity extends ActionBarActivity{
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         hideKeyboard();
 
-                        if(getAndDisplayOneRepMax(cardView.oneRepMaxTV, cardView.repsET, cardView.weightET)){
-                            displayOneRepMaxLayout(cardView.oneRepMaxLayout);
-                        }
+                        getAndDisplayOneRepMax(cardView.oneRepMaxTV, cardView.repsET, cardView.weightET);
+                        displayOneRepMaxOnProgressBar(cardView.progressBar,cardView.repsET, cardView.weightET);
+                        displayOneRepMaxLayout(cardView.oneRepMaxLayout);
+
                         //save strength details to database here straight away
                     }
 
@@ -130,6 +133,15 @@ public class NewCalculations_Activity extends ActionBarActivity{
                 }
             });
         }
+
+    }
+
+    private void displayOneRepMaxLayout(RelativeLayout oneRepMaxLayout){
+
+        Animation anim = AnimationUtils.loadAnimation(ctx, R.anim.one_rep_max_fade_in);
+        oneRepMaxLayout.setAnimation(anim);
+
+        oneRepMaxLayout.setVisibility(View.VISIBLE);
 
     }
 
@@ -145,16 +157,18 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
     }
 
-    /*private boolean getAndDisplayPercentage(int oneRepMax, CustomProgress progressBar){
+    private void displayOneRepMaxOnProgressBar(CustomProgress progressBar,EditText repsET, EditText weightET){
 
-    }*/
+        int reps = Integer.parseInt(repsET.getText().toString());
+        int weight = Integer.parseInt(weightET.getText().toString());
 
-    private void displayOneRepMaxLayout(RelativeLayout oneRepMaxLayout){
+        int oneRepMax = CalculateOneRepMax.calculateOneRepMax(reps, weight);
 
-        Animation anim = AnimationUtils.loadAnimation(ctx, R.anim.one_rep_max_fade_in);
-        oneRepMaxLayout.setAnimation(anim);
+        int eliteWeight = benchPressStandardPresenter.getBenchPressEliteWeightForUsersWeight();
 
-        oneRepMaxLayout.setVisibility(View.VISIBLE);
+        double percentage = CalculatePercentage.calculatePercentage(oneRepMax, eliteWeight);
+
+        progressBar.setMaximumPercentage((float)percentage);
 
     }
 
@@ -170,8 +184,6 @@ public class NewCalculations_Activity extends ActionBarActivity{
     private void setUpActionButton(){
         CustomActionButtonView actionBTN = new CustomActionButtonView(firstActionButton);
         actionBTN.actionButtonImageView.setBackgroundResource(R.mipmap.ic_save_white_36dp);
-
-
     }
 
     private void setUpCardViews(){
@@ -194,7 +206,6 @@ public class NewCalculations_Activity extends ActionBarActivity{
         setUpActionButton();
 
         userPreferedUnits = userDetails.getUserPreferedUnits();
-
 
     }
 

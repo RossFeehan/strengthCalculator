@@ -36,4 +36,8 @@ public class UserAccessor {
     public double getUserWeight(){
         return UserRealmDBCursor.getUserWeight(ctx);
     }
+
+    public String getUsersSex(){
+        return UserRealmDBCursor.getUsersSex(ctx);
+    }
 }
