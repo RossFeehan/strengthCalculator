@@ -276,7 +276,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleLBS(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  170, "Female", "LBS");
+                InstrumentationRegistry.getTargetContext(), 170, "Female", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(165)));
     }
 
@@ -284,7 +284,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForMaleExactKG(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  67, "Male", "KG");
+                InstrumentationRegistry.getTargetContext(), 67, "Male", "KG");
         assertThat(result.getBodyWeight(), is(equalTo(67)));
     }
 
@@ -292,7 +292,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForMaleExactLbs(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  165, "Male", "LBS");
+                InstrumentationRegistry.getTargetContext(), 165, "Male", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(165)));
     }
 
@@ -300,7 +300,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleExactKG(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  75, "Female", "KG");
+                InstrumentationRegistry.getTargetContext(), 75, "Female", "KG");
         assertThat(result.getBodyWeight(), is(equalTo(75)));
     }
 
@@ -308,7 +308,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleExactLbs(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  123, "Female", "LBS");
+                InstrumentationRegistry.getTargetContext(), 123, "Female", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(123)));
     }
 
@@ -316,7 +316,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForMaleHigherKG(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  155, "Male", "KG");
+                InstrumentationRegistry.getTargetContext(), 155, "Male", "KG");
         assertThat(result.getBodyWeight(), is(equalTo(150)));
     }
 
@@ -324,7 +324,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForMaleHigherLbs(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),   325, "Male", "LBS");
+                InstrumentationRegistry.getTargetContext(), 325, "Male", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(320)));
     }
 
@@ -332,7 +332,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleHigherKG(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  97, "Female", "KG");
+                InstrumentationRegistry.getTargetContext(), 97, "Female", "KG");
         assertThat(result.getBodyWeight(), is(equalTo(95)));
     }
 
@@ -340,7 +340,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleHigherLbs(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),   200, "Female", "LBS");
+                InstrumentationRegistry.getTargetContext(), 200, "Female", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(199)));
     }
 
@@ -348,7 +348,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForMaleLowerKG(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  50, "Male", "KG");
+                InstrumentationRegistry.getTargetContext(), 50, "Male", "KG");
         assertThat(result.getBodyWeight(), is(equalTo(52)));
     }
 
@@ -356,7 +356,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForMaleLowerLBS(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),  110, "Male", "LBS");
+                InstrumentationRegistry.getTargetContext(), 110, "Male", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(114)));
     }
 
@@ -364,7 +364,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleLowerKG(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),   40, "Female", "KG");
+                InstrumentationRegistry.getTargetContext(), 40, "Female", "KG");
         assertThat(result.getBodyWeight(), is(equalTo(44)));
     }
 
@@ -372,7 +372,7 @@ public class BenchPressStandardRealmDBCursorTests {
     @Test
     public void getBenchPressStandardForFemaleLowerLBS(){
         BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
-                InstrumentationRegistry.getTargetContext(),   95, "Female", "LBS");
+                InstrumentationRegistry.getTargetContext(), 95, "Female", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(97)));
     }
 }

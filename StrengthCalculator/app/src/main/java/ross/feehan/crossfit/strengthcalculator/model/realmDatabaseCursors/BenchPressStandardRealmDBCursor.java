@@ -47,24 +47,9 @@ public class BenchPressStandardRealmDBCursor {
     public static int getEliteWeightBasedOnUserWeightPreferdUnitsAndSex(Context ctx, int usersWeight, String userSex,
                                                                         String preferedUnits){
 
-        BenchPressStandard benchPressStandard;
+        BenchPressStandard benchPressStandard = getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                ctx, usersWeight, userSex, preferedUnits);
 
-        Realm realm = Realm.getInstance(ctx);
-
-        RealmQuery query = realm.where(BenchPressStandard.class)
-                                .lessThanOrEqualTo("bodyWeight", usersWeight)
-                                .beginsWith("sex", userSex)
-                                .beginsWith("unitOfWeight", preferedUnits);
-
-        RealmResults<BenchPressStandard> results = query.findAll();
-
-        if(results.size() > 0){
-            //get the last result in the RealmResults
-            benchPressStandard = results.last();
-        }
-        else{
-            benchPressStandard = getFirstBenchPressStandardBasedOnSexAndPreferedUnits(ctx, userSex, preferedUnits);
-        }
 
         return benchPressStandard.getElite();
     }

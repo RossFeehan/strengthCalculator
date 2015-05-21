@@ -20,7 +20,7 @@ public class BenchPressStandardPresenter {
     }
 
     public  int getBenchPressEliteWeightForUsersWeight(){
-        int eliteWeight = benchPressStandardAccessor.getEliteWeightBasedOnUsersWeight();
+        int eliteWeight = benchPressStandardAccessor.getEliteWeightBasedOnUsersWeightSexAndPreferedUnits();
 
         return eliteWeight;
     }

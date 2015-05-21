@@ -3,6 +3,7 @@ package ross.feehan.crossfit.strengthcalculator.model.models;
 import android.content.Context;
 
 import ross.feehan.crossfit.strengthcalculator.model.modelInterfaces.BenchPressStandardAccessorInterface;
+import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
 import ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors.BenchPressStandardRealmDBCursor;
 
 /**
@@ -25,7 +26,7 @@ public class BenchPressStandardAccessor {
                 BenchPressStandardRealmDBCursor.getAllBenchPressStandards(ctx));
     }
 
-    public int getEliteWeightBasedOnUsersWeight(){
+    public int getEliteWeightBasedOnUsersWeightSexAndPreferedUnits(){
 
         //get the users weight
         double usersWeight = userAccessor.getUserWeight();
@@ -42,6 +43,24 @@ public class BenchPressStandardAccessor {
 
         //return the elite weight
         return eliteWeight;
+    }
+
+    public BenchPressStandard getBenchPressStandardBasedOnUsersWeightSexAndPreferedUnits(){
+
+        //get the users weight
+        double usersWeight = userAccessor.getUserWeight();
+
+        //get users sex
+        String sex = userAccessor.getUsersSex();
+
+        //get the users preferd units of weight
+        String preferedUnits = userAccessor.getUserPreferedUnits();
+
+        BenchPressStandard benchPressStandard = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                ctx, (int)usersWeight, sex, preferedUnits);
+
+        return benchPressStandard;
+
     }
 
 }
