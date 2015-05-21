@@ -1,7 +1,6 @@
 package ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors;
 
 import android.content.Context;
-
 import io.realm.Realm;
 import io.realm.RealmObject;
 import io.realm.RealmQuery;
@@ -34,8 +33,6 @@ public class UserRealmDBCursor {
         realm.commitTransaction();
     }
 
-
-
     public static String getUserPreferedUnits(Context ctx) {
 
         Realm realm = Realm.getInstance(ctx);
@@ -53,5 +50,16 @@ public class UserRealmDBCursor {
         User user = (User)query.findFirst();
 
         return user.getWeight();
+    }
+
+    public static String getUsersSex(Context ctx){
+
+        Realm realm = Realm.getInstance(ctx);
+
+        RealmQuery query = realm.where(User.class);
+        User user = (User)query.findFirst();
+
+        return user.getSex();
+
     }
 }
