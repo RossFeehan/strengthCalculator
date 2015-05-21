@@ -108,7 +108,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/userInputLayout"
             android:layout_marginTop="15dp"
-            >
+            android:visibility="gone">
 
             <View
                 android:layout_width="300dp"

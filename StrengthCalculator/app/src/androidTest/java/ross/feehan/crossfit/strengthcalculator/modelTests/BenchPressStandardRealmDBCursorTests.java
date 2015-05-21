@@ -245,4 +245,134 @@ public class BenchPressStandardRealmDBCursorTests {
                         InstrumentationRegistry.getTargetContext(), "Female", "LBS");
         assertThat(result.getBodyWeight(), is(equalTo(97)));
     }
+
+    /*Tests for getBenchPressStandardForUsersWeightSexAndPreferedUnits*/
+
+    //The test gives a weight that is between 2 rows for a male KG
+    @Test
+    public void getBenchPressStandardForMaleKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(), 108, "Male", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(100)));
+    }
+
+    //The test gives a weight that is between 2 rows for a male LBS
+    @Test
+    public void getBenchPressStandardForMaleLbs(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(), 230, "Male", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(220)));
+    }
+
+    //The test gives a weight that is between 2 rows for a female KG
+    @Test
+    public void getBenchPressStandardForFemaleKGS(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(), 55, "Female", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(52)));
+    }
+
+    //The test gives a weight that is between 2 rows for a female LBS
+    @Test
+    public void getBenchPressStandardForFemaleLBS(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  170, "Female", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(165)));
+    }
+
+    //This test gives a weight that is exactly a weight in a row for a male KG
+    @Test
+    public void getBenchPressStandardForMaleExactKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  67, "Male", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(67)));
+    }
+
+    //This test gives a weight that is exactly a weight in a row for a male LBS
+    @Test
+    public void getBenchPressStandardForMaleExactLbs(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  165, "Male", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(165)));
+    }
+
+    //This test gives a weight that is exactly a weight in a row for a Female KG
+    @Test
+    public void getBenchPressStandardForFemaleExactKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  75, "Female", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(75)));
+    }
+
+    //This test gives a weight that is exactly a weight in a row for a Female LBS
+    @Test
+    public void getBenchPressStandardForFemaleExactLbs(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  123, "Female", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(123)));
+    }
+
+    //This test is an edge case that gives a weight higher than stored in the DB for a male KG
+    @Test
+    public void getBenchPressStandardForMaleHigherKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  155, "Male", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(150)));
+    }
+
+    //This test is an edge case that gives a weight higher than stored in the DB for a male LBS
+    @Test
+    public void getBenchPressStandardForMaleHigherLbs(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),   325, "Male", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(320)));
+    }
+
+    //This test is an edge case that gives a weight higher than stored in the DB for a female KG
+    @Test
+    public void getBenchPressStandardForFemaleHigherKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  97, "Female", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(95)));
+    }
+
+    //This test is an edge case that gives a weight higher than stored in the DB for a female LBS
+    @Test
+    public void getBenchPressStandardForFemaleHigherLbs(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),   200, "Female", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(199)));
+    }
+
+    //This test is an edge case that gives a weight lower than is stored in the DB for a male KG
+    @Test
+    public void getBenchPressStandardForMaleLowerKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  50, "Male", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(52)));
+    }
+
+    //This test is an edge case that gives a weight lower than is stored in the DB for a male lbs
+    @Test
+    public void getBenchPressStandardForMaleLowerLBS(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),  110, "Male", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(114)));
+    }
+
+    //This test is an edge case that gives a weight lower than is stored in the DB for a female KG
+    @Test
+    public void getBenchPressStandardForFemaleLowerKG(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),   40, "Female", "KG");
+        assertThat(result.getBodyWeight(), is(equalTo(44)));
+    }
+
+    //This test is an edge case that gives a weight lower than is stored in the DB for a female lbs
+    @Test
+    public void getBenchPressStandardForFemaleLowerLBS(){
+        BenchPressStandard result = BenchPressStandardRealmDBCursor.getBenchPressStandardForUsersWeightSexAndPreferedUnits(
+                InstrumentationRegistry.getTargetContext(),   95, "Female", "LBS");
+        assertThat(result.getBodyWeight(), is(equalTo(97)));
+    }
 }
