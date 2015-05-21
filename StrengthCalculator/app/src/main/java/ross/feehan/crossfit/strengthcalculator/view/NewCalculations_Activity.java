@@ -24,6 +24,7 @@ import javax.inject.Inject;
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ross.feehan.crossfit.strengthcalculator.R;
+import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.BenchPressStandardPresenter;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CalculateOneRepMax;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CalculatePercentage;
@@ -124,6 +125,9 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
                         getAndDisplayOneRepMax(cardView.oneRepMaxTV, cardView.repsET, cardView.weightET);
                         displayOneRepMaxOnProgressBar(cardView.progressBar,cardView.repsET, cardView.weightET);
+                        displayStandardsOnProgessBar(cardView.beginnerWeightTV, cardView.noviceWeightTV,
+                                                cardView.skilledWeightTV, cardView.eliteWeightTV);
+
                         displayOneRepMaxLayout(cardView.oneRepMaxLayout);
 
                         //save strength details to database here straight away
@@ -169,6 +173,18 @@ public class NewCalculations_Activity extends ActionBarActivity{
         double percentage = CalculatePercentage.calculatePercentage(oneRepMax, eliteWeight);
 
         progressBar.setMaximumPercentage((float)percentage);
+
+    }
+
+    private void displayStandardsOnProgessBar(TextView beginnerWeightTV, TextView noviceWeightTV,
+                                               TextView skilledWeightTV, TextView eliteWeightTV){
+
+        BenchPressStandard benchPressStandard = benchPressStandardPresenter.getBenchPressStandardBasedOnUserDetails();
+
+        beginnerWeightTV.setText(String.valueOf(benchPressStandard.getUntrained())+userPreferedUnits);
+        noviceWeightTV.setText(String.valueOf(benchPressStandard.getNovice())+userPreferedUnits);
+        skilledWeightTV.setText(String.valueOf(benchPressStandard.getAdvanced())+ userPreferedUnits);
+        eliteWeightTV.setText(String.valueOf(benchPressStandard.getElite())+ " + " + userPreferedUnits);
 
     }
 
