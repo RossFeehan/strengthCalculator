@@ -30,7 +30,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/exerciseHeaderTV"
             android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
             android:layout_marginLeft="17dp"
             android:orientation="horizontal"
             android:weightSum="2">
@@ -107,7 +107,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/userInputLayout"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="5dp"
             android:visibility="gone">
 
             <View
@@ -175,10 +175,11 @@
             <!--Novice Layout !-->
             <RelativeLayout
                android:id="@+id/noviceLayout"
-               android:layout_width="130dp"
+               android:layout_width="60dp"
                android:layout_height="wrap_content"
                android:layout_below="@id/oneRepMaxTV"
                android:layout_marginTop="5dp"
+               android:layout_marginLeft="100dp"
                android:gravity="right"
                android:layout_weight="1">
 
@@ -209,11 +210,12 @@
             <!--skilled Layout !-->
             <RelativeLayout
                 android:id="@+id/skilledLayout"
-                android:layout_width="100dp"
+                android:layout_width="43dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/noviceLayout"
                 android:layout_below="@id/oneRepMaxTV"
                 android:layout_marginTop="5dp"
+                android:layout_marginLeft="50dp"
                 android:gravity="right"
                 android:layout_weight="1">
 
@@ -244,11 +246,12 @@
             <!--elite Layout !-->
             <RelativeLayout
                 android:id="@+id/eliteLayout"
-                android:layout_width="100dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@id/skilledLayout"
                 android:layout_below="@id/oneRepMaxTV"
                 android:layout_marginTop="5dp"
+                android:layout_marginLeft="25dp"
                 android:gravity="right"
                 android:layout_weight="1">
 
