@@ -2,6 +2,7 @@ package ross.feehan.crossfit.strengthcalculator.model.models;
 
 import android.content.Context;
 
+import io.realm.RealmQuery;
 import ross.feehan.crossfit.strengthcalculator.model.objects.User;
 import ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors.UserRealmDBCursor;
 
@@ -26,5 +27,13 @@ public class UserAccessor {
     public void saveUserDetails(User user){
 
         UserRealmDBCursor.setUserDetails(ctx, user);
+    }
+
+    public String getUserPreferedUnits(){
+        return UserRealmDBCursor.getUserPreferedUnits(ctx);
+    }
+
+    public double getUserWeight(){
+        return UserRealmDBCursor.getUserWeight(ctx);
     }
 }

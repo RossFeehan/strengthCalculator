@@ -1,7 +1,6 @@
 package ross.feehan.crossfit.strengthcalculator.view;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.CardView;
@@ -17,14 +16,18 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
+
+import javax.inject.Inject;
 
 import butterknife.ButterKnife;
 import butterknife.InjectView;
 import ross.feehan.crossfit.strengthcalculator.R;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.CalculateOneRepMax;
+import ross.feehan.crossfit.strengthcalculator.presenter.presenters.UserDetails;
 import ross.feehan.crossfit.strengthcalculator.view.widgets.CustomActionButtonView;
+import ross.feehan.crossfit.strengthcalculator.view.widgets.CustomProgress;
 import ross.feehan.crossfit.strengthcalculator.view.widgets.StrengthCardView;
 
 /**
@@ -34,11 +37,8 @@ import ross.feehan.crossfit.strengthcalculator.view.widgets.StrengthCardView;
 public class NewCalculations_Activity extends ActionBarActivity{
 
     private Context ctx;
-    private ArrayList<EditText> weightEditTexts = new ArrayList<EditText>();
-    private ArrayList<TextView> repsTextViews = new ArrayList<TextView>();
-    private ArrayList<TextView> forTextViews = new ArrayList<TextView>();
-    private ArrayList<TextView> weightTextViews = new ArrayList<TextView>();
-    private ArrayList<RelativeLayout> repLayouts = new ArrayList<RelativeLayout>();
+    private ArrayList<StrengthCardView> cardViews = new ArrayList<StrengthCardView>();
+    private String userPreferedUnits;
 
     //bench press card view view
     @InjectView (R.id.benchPressCV)CardView benchPressCV;
@@ -46,6 +46,10 @@ public class NewCalculations_Activity extends ActionBarActivity{
     //action button layouts
     StrengthCardView benchPressCardView;
     @InjectView(R.id.includeActionButton)RelativeLayout firstActionButton;
+
+    //Dependency Injection
+    @Inject UserDetails userDetails;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -55,58 +59,44 @@ public class NewCalculations_Activity extends ActionBarActivity{
         this.ctx = this;
         ButterKnife.inject(this);
 
-        setUpActionButton();
         setUpCardViews();
-
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
-        setSupportActionBar(toolbar);
-
         createViewArrayLists();
         buttonClicks();
 
+
     }
 
+    //The lists that will be acted on when the user interacts with relevant CardView
     private void createViewArrayLists(){
 
-        //TODO USE VIEW LISTS FROM BUTTERKNIFE INSTEAD OF SETTING UP THESE ARRAYS
         //weight edit texts
-        weightEditTexts.add(benchPressCardView.weightET);
-
-        //reps text views
-        repsTextViews.add(benchPressCardView.repsTV);
-
-        //for how many text views
-        forTextViews.add(benchPressCardView.forHowManyTV);
-
-        //weight text views
-        weightTextViews.add(benchPressCardView.weightTV);
-
-        //one rep max layouts
-        repLayouts.add(benchPressCardView.oneRepMaxLayout);
+        cardViews.add(benchPressCardView);
 
     }
 
     private void buttonClicks(){
 
-        for(int i = 0; i< weightEditTexts.size(); i++){
+        //loop through each card view and set up the click events
+        for(final StrengthCardView cardView : cardViews){
 
-            EditText editTextView = weightEditTexts.get(i);
-            final int iAsFinal = i;
+            //cardView = the card we are currently on.
+
+            EditText weightET = cardView.weightET;
 
             //display the "reps for" txt views when the weight edit text gets the focus
-            editTextView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            weightET.setOnFocusChangeListener(new View.OnFocusChangeListener() {
                 @Override
                 public void onFocusChange(View v, boolean hasFocus) {
-                    if(hasFocus){
-                        repsTextViews.get(iAsFinal).setVisibility(View.VISIBLE);
-                        forTextViews.get(iAsFinal).setVisibility(View.VISIBLE);
+                    if (hasFocus) {
+                        cardView.repsTV.setVisibility(View.VISIBLE);
+                        cardView.forHowManyTV.setVisibility(View.VISIBLE);
 
                     }
                 }
             });
 
             //Display the KGs after the weight Edit Text once the user starts typing
-            editTextView.addTextChangedListener(new TextWatcher() {
+            weightET.addTextChangedListener(new TextWatcher() {
                 @Override
                 public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -114,7 +104,8 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
                 @Override
                 public void onTextChanged(CharSequence s, int start, int before, int count) {
-                    weightTextViews.get(iAsFinal).setVisibility(View.VISIBLE);
+                   cardView.weightTV.setText(userPreferedUnits);
+                   cardView.weightTV.setVisibility(View.VISIBLE);
                 }
 
                 @Override
@@ -123,14 +114,15 @@ public class NewCalculations_Activity extends ActionBarActivity{
             });
 
             //Dismiss the soft keyboard and get the 1RM once the user has finished typing.
-            editTextView.setOnEditorActionListener(new TextView.OnEditorActionListener() {
+            weightET.setOnEditorActionListener(new TextView.OnEditorActionListener() {
                 @Override
                 public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                     if (actionId == EditorInfo.IME_ACTION_DONE) {
                         hideKeyboard();
 
-                        displayOneRepMaxLayout(repLayouts.get(iAsFinal));
-
+                        if(getAndDisplayOneRepMax(cardView.oneRepMaxTV, cardView.repsET, cardView.weightET)){
+                            displayOneRepMaxLayout(cardView.oneRepMaxLayout);
+                        }
                         //save strength details to database here straight away
                     }
 
@@ -140,6 +132,22 @@ public class NewCalculations_Activity extends ActionBarActivity{
         }
 
     }
+
+    private boolean getAndDisplayOneRepMax(TextView oneRepMaxTextView, EditText repsET, EditText weightET){
+
+        int reps = Integer.parseInt(repsET.getText().toString());
+        int weight = Integer.parseInt(weightET.getText().toString());
+
+        oneRepMaxTextView.setText(String.valueOf(CalculateOneRepMax.calculateOneRepMax(
+                        reps, weight))+" "+userPreferedUnits);
+
+        return true;
+
+    }
+
+    /*private boolean getAndDisplayPercentage(int oneRepMax, CustomProgress progressBar){
+
+    }*/
 
     private void displayOneRepMaxLayout(RelativeLayout oneRepMaxLayout){
 
@@ -170,5 +178,28 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
         benchPressCardView = new StrengthCardView(benchPressCV);
 
+    }
+
+    //ACTIVITY LIFECYCLE METHODS
+    @Override
+    protected void onStart(){
+        super.onStart();
+
+        //For Dependency Injection
+        ((StrengthCalculatorApplication)getApplication()).getObjectGraph().inject(this);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar_main);
+        setSupportActionBar(toolbar);
+
+        setUpActionButton();
+
+        userPreferedUnits = userDetails.getUserPreferedUnits();
+
+
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
     }
 }

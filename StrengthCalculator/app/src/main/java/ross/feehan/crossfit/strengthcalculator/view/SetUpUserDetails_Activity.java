@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
@@ -32,6 +33,7 @@ public class SetUpUserDetails_Activity extends ActionBarActivity implements Crea
     @InjectView(R.id.maleRBTN)RadioButton maleRadioBTN;
     @InjectView(R.id.femaleRBTN) RadioButton femaleRadioBTN;
     @InjectView(R.id.nextBTN)RelativeLayout nextBtn;
+    @InjectView(R.id.weightET)EditText userWeightET;
     @Inject CreateUser createUser;
 
     @Override
@@ -87,7 +89,14 @@ public class SetUpUserDetails_Activity extends ActionBarActivity implements Crea
     @OnClick(R.id.customActionBTNLayout)
     public void onNextBTNClicked(){
 
-        createUser.createUser(this);
+        if(userWeightET.getText().toString().isEmpty()){
+            userWeightET.setError("Please enter your weight");
+        }
+        else{
+            createUser.createUser(this, Double.parseDouble(userWeightET.getText().toString()));
+        }
+
+
     }
 
     private void setUpActionButton(){

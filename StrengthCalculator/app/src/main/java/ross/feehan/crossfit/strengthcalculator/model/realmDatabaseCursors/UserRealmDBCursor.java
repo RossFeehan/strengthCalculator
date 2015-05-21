@@ -33,4 +33,25 @@ public class UserRealmDBCursor {
         realm.copyToRealm(user);
         realm.commitTransaction();
     }
+
+
+
+    public static String getUserPreferedUnits(Context ctx) {
+
+        Realm realm = Realm.getInstance(ctx);
+
+        RealmQuery query = realm.where(User.class);
+        User user = (User)query.findFirst();
+
+        return user.getPreferedUnits();
+    }
+
+    public static double getUserWeight(Context ctx){
+        Realm realm = Realm.getInstance(ctx);
+
+        RealmQuery query = realm.where(User.class);
+        User user = (User)query.findFirst();
+
+        return user.getWeight();
+    }
 }

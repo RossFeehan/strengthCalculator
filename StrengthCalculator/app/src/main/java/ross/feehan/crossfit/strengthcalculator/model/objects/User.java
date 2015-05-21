@@ -9,6 +9,7 @@ import io.realm.RealmObject;
 public class User extends RealmObject {
 
     private String preferedUnits, sex;
+    private double weight;
     public final static String SEXMALE = "Male", SEXFEMALE = "Female",
             KGUNIT = "KG", LBSUNIT = "LBS";
 
@@ -26,6 +27,10 @@ public class User extends RealmObject {
         this.sex = sex;
     }
 
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
+
     //GETTERS
     public String getPreferedUnits() {
         return preferedUnits;
@@ -33,5 +38,9 @@ public class User extends RealmObject {
 
     public String getSex() {
         return sex;
+    }
+
+    public double getWeight() {
+        return weight;
     }
 }

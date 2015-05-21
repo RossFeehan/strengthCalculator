@@ -24,6 +24,7 @@ public class StrengthCardView {
     @InjectView(R.id.weightTV)public TextView weightTV;
     @InjectView(R.id.oneRepMaxLayout)public RelativeLayout oneRepMaxLayout;
     @InjectView(R.id.progressBar)public CustomProgress progressBar;
+    @InjectView(R.id.oneRepMaxTV)public TextView oneRepMaxTV;
 
 
     public StrengthCardView(CardView view){
