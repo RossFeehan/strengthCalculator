@@ -1,11 +1,7 @@
 package ross.feehan.crossfit.strengthcalculator.model.realmDatabaseCursors;
 
 import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 
 import io.realm.Realm;
@@ -48,19 +44,46 @@ public class BenchPressStandardRealmDBCursor {
         return benchPressStandards;
     }
 
-    public static int getEliteWeightBasedOnUserWeight(Context ctx, int usersWeight){
+    public static int getEliteWeightBasedOnUserWeightPreferdUnitsAndSex(Context ctx, int usersWeight, String userSex,
+                                                                        String preferedUnits){
+
+        BenchPressStandard benchPressStandard;
 
         Realm realm = Realm.getInstance(ctx);
 
         RealmQuery query = realm.where(BenchPressStandard.class)
-                                .lessThan("bodyWeight", usersWeight);
+                                .lessThanOrEqualTo("bodyWeight", usersWeight)
+                                .beginsWith("sex", userSex)
+                                .beginsWith("unitOfWeight", preferedUnits);
 
         RealmResults<BenchPressStandard> results = query.findAll();
 
-        //get the last result in the RealmResults
-        BenchPressStandard benchPressStandard = results.last();
+        if(results.size() > 0){
+            //get the last result in the RealmResults
+            benchPressStandard = results.last();
+        }
+        else{
+            benchPressStandard = getFirstBenchPressStandardBasedOnSexAndPreferedUnits(ctx, userSex, preferedUnits);
+        }
 
         return benchPressStandard.getElite();
+    }
+
+    public static BenchPressStandard getFirstBenchPressStandardBasedOnSexAndPreferedUnits(Context ctx, String sex,
+                                                                                          String preferdUnits){
+
+        Realm realm = Realm.getInstance(ctx);
+
+        RealmQuery query = realm.where(BenchPressStandard.class)
+                                .beginsWith("sex", sex)
+                                .beginsWith("unitOfWeight", preferdUnits);
+
+        BenchPressStandard benchPressStandard = (BenchPressStandard) query.findFirst();
+
+        return benchPressStandard;
+
+
+
     }
 
 

@@ -27,6 +27,8 @@ public class BenchPressStandardAccessor {
 
         //get the users weight
 
+        //get the users preferd units of weight
+
         //get the elite weight based on the users weight
 
         //return the elite weight
