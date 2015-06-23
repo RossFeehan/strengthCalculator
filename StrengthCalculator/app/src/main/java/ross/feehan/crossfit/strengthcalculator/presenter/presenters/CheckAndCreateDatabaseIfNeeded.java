@@ -1,7 +1,5 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
-import android.content.Context;
-
 import java.util.ArrayList;
 
 import javax.inject.Inject;
@@ -19,15 +17,14 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.Che
  */
 public class CheckAndCreateDatabaseIfNeeded implements BenchPressStandardAccessorInterface, CreateDatabaseInterface {
 
-    private Context ctx;
+
     @Inject BenchPressStandardAccessor benchPressStandardAccessor;
     @Inject CreateDatabase createDatabase;
     private CheckAndCreateDatabaseIfNeededInterface checkDatabaseInterface;
 
 
-    public CheckAndCreateDatabaseIfNeeded(Context ctx, BenchPressStandardAccessor benchPressStandardAccessor,
+    public CheckAndCreateDatabaseIfNeeded(BenchPressStandardAccessor benchPressStandardAccessor,
                                     CreateDatabase createDatabase){
-        this.ctx = ctx;
         this.benchPressStandardAccessor = benchPressStandardAccessor;
         this.createDatabase = createDatabase;
     }

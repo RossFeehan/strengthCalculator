@@ -1,7 +1,5 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
-import android.content.Context;
-
 import ross.feehan.crossfit.strengthcalculator.model.models.UserAccessor;
 import ross.feehan.crossfit.strengthcalculator.model.objects.User;
 import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.CheckForUserInterface;
@@ -12,11 +10,9 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.Che
  */
 public class CheckForUser {
 
-    private Context ctx;
     private UserAccessor userAccessor;
 
-    public CheckForUser(Context ctx, UserAccessor userAccessor){
-        this.ctx = ctx;
+    public CheckForUser(UserAccessor userAccessor){
         this.userAccessor = userAccessor;
     }
 

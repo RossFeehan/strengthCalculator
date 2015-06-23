@@ -221,7 +221,10 @@ public class NewCalculations_Activity extends ActionBarActivity{
 
         setUpActionButton();
 
+
         userPreferedUnits = userDetails.getUserPreferedUnits();
+
+
 
     }
 

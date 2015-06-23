@@ -1,7 +1,5 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
-import android.content.Context;
-
 import ross.feehan.crossfit.strengthcalculator.model.models.BenchPressStandardAccessor;
 import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
 
@@ -12,11 +10,10 @@ import ross.feehan.crossfit.strengthcalculator.model.objects.BenchPressStandard;
 
 public class BenchPressStandardPresenter {
 
-    private Context ctx;
     private BenchPressStandardAccessor benchPressStandardAccessor;
 
-    public BenchPressStandardPresenter(Context ctx, BenchPressStandardAccessor benchPressStandardAccessor){
-        this.ctx = ctx;
+    public BenchPressStandardPresenter(BenchPressStandardAccessor benchPressStandardAccessor){
+
         this.benchPressStandardAccessor = benchPressStandardAccessor;
     }
 

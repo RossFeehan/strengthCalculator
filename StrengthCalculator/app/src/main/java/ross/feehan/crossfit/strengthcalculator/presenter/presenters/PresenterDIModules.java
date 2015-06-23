@@ -39,27 +39,27 @@ public class PresenterDIModules {
     public CheckAndCreateDatabaseIfNeeded provideCreateDatabase(BenchPressStandardAccessor benchPressStandardAccessor,
                                                   CreateDatabase createDatabase){
 
-        return checkAndCreateDatabaseIfNeeded = new CheckAndCreateDatabaseIfNeeded(ctx,
+        return checkAndCreateDatabaseIfNeeded = new CheckAndCreateDatabaseIfNeeded(
                 benchPressStandardAccessor, createDatabase);
     }
 
     @Provides @Singleton
     public CheckForUser provideCheckForUser(UserAccessor userAccessor){
-         return checkForUser = new CheckForUser(ctx, userAccessor);
+         return checkForUser = new CheckForUser(userAccessor);
     }
 
     @Provides @Singleton
     public CreateUser provideCreateUser(User user, UserAccessor userAccessor){
-        return createUser = new CreateUser(ctx, user, userAccessor);
+        return createUser = new CreateUser(user, userAccessor);
     }
 
     @Provides @Singleton
     public UserDetails provideUserDetails(UserAccessor userAccessor){
-        return userDetails = new UserDetails(ctx, userAccessor);
+        return userDetails = new UserDetails(userAccessor);
     }
 
     @Provides @Singleton
     public BenchPressStandardPresenter provideBenchPressStandardPresenter(BenchPressStandardAccessor benchPressStandardAccessor){
-        return benchPressStandardPresenter = new BenchPressStandardPresenter(ctx, benchPressStandardAccessor);
+        return benchPressStandardPresenter = new BenchPressStandardPresenter(benchPressStandardAccessor);
     }
 }

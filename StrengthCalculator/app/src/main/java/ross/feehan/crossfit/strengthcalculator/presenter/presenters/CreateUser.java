@@ -1,7 +1,5 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
-import android.content.Context;
-
 import ross.feehan.crossfit.strengthcalculator.model.models.CreateDatabase;
 import ross.feehan.crossfit.strengthcalculator.model.models.UserAccessor;
 import ross.feehan.crossfit.strengthcalculator.model.objects.User;
@@ -13,12 +11,10 @@ import ross.feehan.crossfit.strengthcalculator.presenter.presenterInterfaces.Cre
  */
 public class CreateUser {
 
-    private Context ctx;
     private User newUserDetails;
     private UserAccessor userAccessor;
 
-    public CreateUser(Context ctx, User user, UserAccessor userAccessor){
-        this.ctx = ctx;
+    public CreateUser(User user, UserAccessor userAccessor){
         this.newUserDetails = user;
         this.userAccessor = userAccessor;
     }

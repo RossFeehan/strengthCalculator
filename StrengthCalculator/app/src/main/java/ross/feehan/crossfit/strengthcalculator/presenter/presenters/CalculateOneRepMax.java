@@ -1,6 +1,5 @@
 package ross.feehan.crossfit.strengthcalculator.presenter.presenters;
 
-
 /**
  * Created by Ross Feehan on 20/05/2015.
  * Copyright Ross Feehan

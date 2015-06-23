@@ -40,7 +40,13 @@ public class UserRealmDBCursor {
         RealmQuery query = realm.where(User.class);
         User user = (User)query.findFirst();
 
-        return user.getPreferedUnits();
+        if(user != null){
+            return user.getPreferedUnits();
+        }
+        else{
+            return " ";
+        }
+
     }
 
     public static double getUserWeight(Context ctx){
